@@ -1,0 +1,31 @@
+---
+const data = {
+  socials: [
+    { icon: '/wpp-icon.svg', url: '#' },
+    { icon: '/instagram-icon.svg', url: '#' },
+    { icon: 'linkedin-icon.svg', url: '#' },
+  ],
+};
+---
+
+<div
+  class="bg-[#EDA732] text-white text-sm flex justify-end items-center gap-4 p-6 overflow-visible"
+>
+  <div
+    class="absolute flex items-center gap-4 bg-[#004b71] min-w-md right-0 justify-end h-20"
+    style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);"
+  >
+    {
+      data.socials.map((social) => (
+        <a
+          href={social.url}
+          class="hover:opacity-75 p-2"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src={social.icon} />
+        </a>
+      ))
+    }
+  </div>
+</div>
