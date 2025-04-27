@@ -1,20 +1,17 @@
 ---
 const footerImages = [
-  { path: '/linkedin-footer.svg' },
-  { path: '/facebook-footer.svg' },
-  { path: '/whatsapp-footer.svg' },
+  { url: '', path: '/linkedin-footer.svg' },
+  { url: '', path: '/facebook-footer.svg' },
+  { url: '', path: '/whatsapp-footer.svg' },
 ];
 ---
 
 <section>
   <img src="/over-footer.svg" class="w-full" />
   <div class="grid grid-cols-4 gap-4 bg-[#D0DBE0] px-6 py-10">
-    <!-- Grid 1-2: Logo and contact info in vertical layout -->
     <div class="col-span-2 flex flex-row gap-4">
-      <!-- Logo -->
       <img src="/explofy-logo.svg" alt="Exploy Catalani Factory" />
       <div class="flex flex-col gap-4">
-        <!-- Phone info -->
         <div class="flex flex-row items-center gap-2">
           <img src="/phone-icon.svg" alt="Phone icon" class="h-10" />
           <div class="flex flex-col">
@@ -23,7 +20,6 @@ const footerImages = [
           </div>
         </div>
 
-        <!-- Email info -->
         <div class="flex flex-col gap-1">
           <a
             href="mailto:mario@explofy.com.ar"
@@ -39,7 +35,6 @@ const footerImages = [
           </a>
         </div>
 
-        <!-- Address info -->
         <p class="font-bold text-[#004B64]">
           Cristobal Colón 32 (altura de San Martín 6592) Carrodilla, Luján de
           Cuyo Mendoza República Argentina CPM5505FSN
@@ -47,7 +42,6 @@ const footerImages = [
       </div>
     </div>
 
-    <!-- Grid 3: Menu -->
     <div class="col-start-3 flex flex-col gap-2">
       <a href="" class="text-[#004B64] font-semibold">Menú</a>
       <a href="" class="text-[#004B64] font-light">Producto</a>
@@ -56,11 +50,16 @@ const footerImages = [
       <a href="" class="text-[#004B64] font-light">Cotizar</a>
     </div>
 
-    <!-- Grid 4: Social Media -->
     <div class="col-start-4">
       <h3 class="text-[#004B64] font-semibold mb-2">Redes sociales</h3>
       <div class="flex flex-row gap-2">
-        {footerImages.map((image) => <img src={image.path} />)}
+        {
+          footerImages.map((image) => (
+            <a href={image.url}>
+              <img src={image.path} />
+            </a>
+          ))
+        }
       </div>
     </div>
   </div>

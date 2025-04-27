@@ -3,11 +3,6 @@ const heroData = {
   title: 'Repuestos de calidad para equipos mineros',
   subtitle: 'Diseño y fabricación',
 };
-const navLinks = [
-  { title: 'Productos', href: '#', dropdown: true },
-  { title: 'Nosotros', href: '#' },
-  { title: 'Contacto', href: '#' },
-];
 ---
 
 <section
@@ -15,34 +10,13 @@ const navLinks = [
   style={`background-image: url('/hero-bg.svg')`}
 >
   <div
-    class="flex flex-row justify-center absolute self-center left-0 right-0 -top-10"
+    class="absolute left-20 bottom-10 bg-black/10 flex items-center justify-center"
   >
-    <nav
-      class="hidden md:flex items-center gap-8 text-white bg-[#004B64] font-medium min-w-3xl justify-between"
-    >
-      {
-        navLinks.map((link) => (
-          <a href={link.href} class="hover:underline px-6">
-            {link.title}
-          </a>
-        ))
-      }
-      <a
-        href="#"
-        class="bg-[#f5a623] text-white py-6 px-20 font-bold hover:bg-[#e59820] relative inline-block"
-        style="clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);"
-      >
-        Cotizar
-      </a>
-    </nav>
-  </div>
-
-  <div class="absolute inset-0 bg-black/10 flex items-center justify-center">
-    <div
-      class="bg-[#004B6480]/80 text-white max-w-2xl p-8 h-[20rem] rounded-md"
-    >
-      <h1 class="text-5xl font-bold mb-4">{heroData.title}</h1>
-      <p class="text-2xl">{heroData.subtitle}</p>
+    <div class="bg-[#004B6480]/80 max-w-2xl p-8 h-[20rem] rounded-md">
+      <h1 class="text-5xl font-bold mb-4 text-white">
+        Repuestos de calidad<br /> para equipos mineros
+      </h1>
+      <p class="text-2xl text-white">{heroData.subtitle}</p>
     </div>
   </div>
 </section>
