@@ -4,13 +4,18 @@ const footerImages = [
   { url: '', path: '/facebook-footer.svg' },
   { url: '', path: '/whatsapp-footer.svg' },
 ];
+const currentYear = new Date().getFullYear();
 ---
 
 <section>
   <img src="/over-footer.svg" class="w-full" />
   <div class="grid grid-cols-4 gap-4 bg-[#D0DBE0] px-6 py-10">
-    <div class="col-span-2 flex flex-row gap-4">
-      <img src="/explofy-logo.svg" alt="Exploy Catalani Factory" />
+    <div class="col-span-2 flex flex-row items-start gap-4">
+      <img
+        src="/explofy-logo.svg"
+        alt="Exploy Catalani Factory"
+        class="mr-[78px] ml-[195px]"
+      />
       <div class="flex flex-col gap-4">
         <div class="flex flex-row items-center gap-2">
           <img src="/phone-icon.svg" alt="Phone icon" class="h-10" />
@@ -42,7 +47,7 @@ const footerImages = [
       </div>
     </div>
 
-    <div class="col-start-3 flex flex-col gap-2">
+    <div class="col-start-3 flex flex-col gap-2 mr-[115px] ml-[115px]">
       <a href="" class="text-[#004B64] font-semibold">Menú</a>
       <a href="" class="text-[#004B64] font-light">Producto</a>
       <a href="" class="text-[#004B64] font-light">Nosotros</a>
@@ -62,5 +67,11 @@ const footerImages = [
         }
       </div>
     </div>
+  </div>
+  <div class="bg-[#D0DBE0] flex flex-col items-center">
+    <div class="bg-[#004B64] h-[1.05px] w-3/4 my-2 opacity-50"></div>
+    <h4 class="text-center text-[#004B64] text-[17px] my-4">
+      &copy; Copyright {currentYear}. Ingenio ADN. All right reserved
+    </h4>
   </div>
 </section>
