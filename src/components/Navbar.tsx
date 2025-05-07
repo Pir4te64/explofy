@@ -13,7 +13,7 @@ import { renderDropdownItems } from '@/helpers/dropdown-helper';
 export function Navbar() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
-    <nav className="sticky top-0 z-50 w-[80rem] bg-[#004B64] h-[5.2rem] flex flex-row justify-between">
+    <nav className="sticky top-0 w-[80rem] bg-[#004B64] h-[5.2rem] flex flex-row justify-between">
       <div className="flex items-center justify-between max-w-[1200px] h-full px-[2.5rem]">
         {/* Left side: Dropdown and links */}
         <div className="flex items-center gap-12 text-white text-[1.375rem]">
@@ -24,7 +24,7 @@ export function Navbar() {
                 <ChevronDown className="size-4" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[6rem]">
+            <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[16rem] mt-[1.2rem]">
               {renderDropdownItems(
                 navLink.dropdownItems,
                 selectedIndex,
