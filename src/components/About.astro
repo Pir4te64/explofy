@@ -25,14 +25,9 @@ const cardsData = [
       'Diseñamos estructuras y componentes metalúrgicos a medida con precisión, innovación y calidad.',
   },
 ];
-const ctaData = [
-  { text: '¡Diseña tu producto personalizado ahora!' },
-  { text: '¡Solicita tu presupuesto de metalúrgica ya!' },
-  { text: '¡Haz tu pedido de repuestos hoy mismo!' },
-];
 ---
 
-<section class="min-h-screen mb-[70px]">
+<section class="relative mb-[70px] z-10">
   <div class="grid grid-cols-7 grid-rows-5 gap-4">
     <div class="col-span-3 row-span-3 col-start-2 row-start-2">
       <h2 class="text-[#000929] text-[38px] font-bold">Somos la Fábrica</h2>
@@ -70,24 +65,9 @@ const ctaData = [
       />
     </div>
 
-    <div
-      class="col-span-5 row-span-2 col-start-2 row-start-5 bg-[#D0DBE0] rounded-2xl p-6"
-    >
-      <h4 class="text-[38px] font-bold">
-        Solicita tu Cotización Personalizada
-      </h4>
-      <h5 class="text-[24px] font-light">
-        Cuéntanos tus necesidades y te brindaremos la mejor opción.
-      </h5>
-      <div class="mt-4 flex gap-4">
-        {
-          ctaData.map((data) => (
-            <p class="bg-[#FFBD2B] text-[#000929] text-[20px] font-semibold px-4 py-4 rounded-md text-center">
-              {data.text}
-            </p>
-          ))
-        }
-      </div>
-    </div>
+    <img
+      src="/about-card.svg"
+      class="col-span-5 row-span-2 col-start-2 row-start-5"
+    />
   </div>
 </section>

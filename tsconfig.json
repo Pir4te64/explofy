@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
+    "resolveJsonModule": true,
     "paths": {
       "@/components/*": ["./src/components/*"],
       "@/layouts/*": ["./src/layouts/*"],
-      "@/pages/*": ["./src/pages/*"]
-    }
+      "@/pages/*": ["./src/pages/*"],
+      "@/helpers/*": ["./src/helpers/*"],
+      "@/texts/*": ["./src/assets/texts/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
   "extends": "astro/tsconfigs/strict",
   "include": [".astro/types.d.ts", "**/*"],

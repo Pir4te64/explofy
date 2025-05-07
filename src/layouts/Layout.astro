@@ -10,18 +10,58 @@ import '../styles/globals.css';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>Explofy</title>
+    <style is:inline>
+      #loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.5s ease;
+      }
+
+      #loader.fade-out {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .spinner {
+        width: 3rem;
+        height: 3rem;
+        border: 4px solid #ccc;
+        border-top: 4px solid #004b64;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      html,
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Averta';
+      }
+    </style>
+    <script is:inline>
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        loader?.classList.add('fade-out');
+        setTimeout(() => loader?.remove(), 500);
+      });
+    </script>
   </head>
   <body>
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
     <slot />
   </body>
 </html>
-
-<style>
-  html,
-  body {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'Averta';
-  }
-</style>

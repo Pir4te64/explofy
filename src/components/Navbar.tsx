@@ -1,0 +1,53 @@
+'use client';
+
+import { useState } from 'react';
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+} from '@/components/ui/dropdown-menu';
+import { ChevronDown } from 'lucide-react';
+import navLink from '../assets/texts/navLink.json';
+import { renderDropdownItems } from '@/helpers/dropdown-helper';
+
+export function Navbar() {
+  const [selectedIndex, setSelectedIndex] = useState(0);
+  return (
+    <nav className="sticky top-0 z-50 w-[80rem] bg-[#004B64] h-[5.2rem] flex flex-row justify-between">
+      <div className="flex items-center justify-between max-w-[1200px] h-full px-[2.5rem]">
+        {/* Left side: Dropdown and links */}
+        <div className="flex items-center gap-12 text-white text-[1.375rem]">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <button className="flex items-center gap-1 hover:underline hover:text-[#f5a623]">
+                {navLink.title}
+                <ChevronDown className="size-4" />
+              </button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[6rem]">
+              {renderDropdownItems(
+                navLink.dropdownItems,
+                selectedIndex,
+                setSelectedIndex
+              )}
+            </DropdownMenuContent>
+          </DropdownMenu>
+          <a href="#" className="hover:underline hover:text-[#f5a623]">
+            Nosotros
+          </a>
+          <a href="#" className="hover:underline hover:text-[#f5a623]">
+            Contacto
+          </a>
+        </div>
+      </div>
+      {/* Right side: Cotizar button */}
+      <a
+        href="#"
+        className="bg-[#f5a623] text-white font-bold text-center flex items-center text-[1.4rem] justify-center w-[20rem] h-full hover:bg-[#e59820]"
+        style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)' }}
+      >
+        Cotizar
+      </a>
+    </nav>
+  );
+}

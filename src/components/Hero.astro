@@ -1,87 +1,28 @@
 ---
-import { ChevronDown } from '@lucide/astro';
-
-const navLinks = [
-  {
-    title: 'Productos',
-    href: '#',
-    dropdown: true,
-    dropdownItems: [
-      { title: 'Producto 1' },
-      { title: 'Producto 2' },
-      { title: 'Producto 3' },
-    ],
-  },
-  { title: 'Nosotros', href: '#' },
-  { title: 'Contacto', href: '#' },
-];
 const heroData = {
   title: 'Repuestos de calidad para equipos mineros',
   subtitle: 'Diseño y fabricación',
 };
 ---
 
-<section
-  class="relative w-full h-[80vh] bg-cover bg-center"
-  style={`background-image: url('/hero-bg.svg')`}
->
-  <div
-    class="flex flex-row justify-center absolute self-center left-0 -top-10 right-0 z-50"
-  >
-    <nav
-      class="hidden md:flex items-center justify-between pl-12 pr-0 bg-[#004B64] w-[1300px] h-[95px]"
+<section class="relative w-full h-[80vh]">
+  <div class="absolute inset-0 z-0">
+    <div
+      class="w-full h-full bg-cover bg-center"
+      style={{ backgroundImage: "url('/hero-bg.svg')" }}
     >
-      <div class="flex items-center gap-12">
-        {
-          navLinks.map((link) => (
-            <div class="relative group text-[22px]">
-              <a
-                href={link.href}
-                aria-haspopup={link.dropdown ? 'true' : undefined}
-                class="hover:underline flex items-center gap-1 text-white"
-              >
-                {link.title}
-                {link.dropdown && (
-                  <ChevronDown class="transition-transform duration-300 group-hover:rotate-180" />
-                )}
-              </a>
-
-              {link.dropdown && link.dropdownItems && (
-                <ul class="absolute hidden group-hover:block bg-[#004B64] text-white shadow-md mt-2 rounded-md min-w-[150px] z-50">
-                  {link.dropdownItems.map((item) => (
-                    <li>
-                      <a
-                        href="#"
-                        class="block px-4 py-2 hover:bg-white hover:text-[#004B64] font-normal"
-                      >
-                        {item.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))
-        }
-      </div>
-
-      <a
-        href="#"
-        class="bg-[#f5a623] text-white font-bold text-center flex items-center text-[28px] justify-center w-[360px] h-full hover:bg-[#e59820]"
-        style="clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%)"
-      >
-        Cotizar
-      </a>
-    </nav>
+    </div>
   </div>
   <div
-    class="absolute left-[188px] bottom-[83px] bg-black/10 flex items-center justify-center"
+    class="absolute left-[11.75rem] bottom-[5.2rem] bg-black/10 flex items-center justify-center z-10"
   >
-    <div class="bg-[#004B6480]/80 h-[400px] w-[800px] rounded-md">
-      <h1 class="text-[60px] font-bold text-white mt-[95px] ml-[50px]">
-        Repuestos de calidad<br /> para equipos mineros
+    <div class="bg-[#004B6480]/80 h-[25rem] w-[50rem] rounded-md">
+      <h1
+        class="text-[3.75rem] font-bold text-white mt-[5.9rem] ml-[3.125rem] leading-tight"
+      >
+        {heroData.title}
       </h1>
-      <p class="text-[34px] text-white mt-[22px] ml-[50px]">
+      <p class="text-[2.125rem] text-white mt-[1.375rem] ml-[3.125rem]">
         {heroData.subtitle}
       </p>
     </div>

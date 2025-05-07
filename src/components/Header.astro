@@ -1,8 +1,10 @@
 ---
-
+import { Navbar } from './Navbar';
 ---
 
-<header class="bg-white flex flex-col justify-between px-4 py-8 z-50">
+<header
+  class="bg-white flex flex-col justify-between px-4 py-8 z-[999] sticky top-[62px]"
+>
   <div class="flex items-center gap-2 justify-between">
     <img
       src="/explofy-logo.svg"
@@ -15,5 +17,10 @@
         ¡Hola!<span class="text-black font-normal">(+54) 0261 4960201</span>
       </p>
     </div>
+  </div>
+  <div
+    class="flex flex-row justify-center self-center z-50 absolute top-[9rem]"
+  >
+    <Navbar client:only="react" />
   </div>
 </header>
