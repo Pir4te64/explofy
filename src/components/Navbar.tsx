@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
-} from '@/components/ui/dropdown-menu';
-import { ChevronDown } from 'lucide-react';
-import navLink from '../assets/texts/navLink.json';
-import { renderDropdownItems } from '@/helpers/dropdown-helper';
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
+import navLink from "../assets/texts/navLink.json";
+import { renderDropdownItems } from "@/helpers/dropdown-helper";
 
 export function Navbar() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -44,7 +44,7 @@ export function Navbar() {
       <a
         href="#"
         className="bg-[#f5a623] text-white font-bold text-center flex items-center text-[1.4rem] justify-center w-[20rem] h-full hover:bg-[#e59820]"
-        style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)' }}
+        style={{ clipPath: "polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
       >
         Cotizar
       </a>

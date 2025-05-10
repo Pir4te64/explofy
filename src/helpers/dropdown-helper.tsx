@@ -12,8 +12,8 @@ export function renderDropdownItems(
             key={item.text}
             className={`text-[1.35rem] text-left px-6 py-3 rounded-lg font-medium transition-all flex items-center justify-between ${
               idx === selectedIndex
-                ? 'bg-[#F5A623] text-[#004B64] shadow-md'
-                : 'hover:bg-[#F5A623]/70 text-[#004B64]'
+                ? "bg-[#F5A623] text-[#004B64] shadow-md"
+                : "hover:bg-[#F5A623]/70 text-[#004B64]"
             }`}
             onMouseEnter={() => setSelectedIndex(idx)}
             onFocus={() => setSelectedIndex(idx)}
