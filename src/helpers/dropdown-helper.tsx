@@ -4,13 +4,13 @@ export function renderDropdownItems(
   setSelectedIndex: (idx: number) => void
 ) {
   return (
-    <div className="flex flex-row w-[90rem] bg-[#CCD9DF] rounded-xl border border-[#B49AFF] shadow-lg p-8 gap-12">
+    <div className="flex flex-row w-[70rem] bg-[#CCD9DF] rounded-xl border border-[#B49AFF] shadow-lg p-8 gap-2">
       {/* Main categories */}
-      <div className="flex flex-col gap-6 min-w-[25rem]">
+      <div className="flex flex-col gap-7 min-w-[14rem]">
         {items.map((item, idx) => (
           <button
             key={item.text}
-            className={`text-[1.35rem] text-left px-6 py-3 rounded-lg font-medium transition-all flex items-center justify-between ${
+            className={`text-[1rem] text-left px-2 py-1 rounded-lg font-medium transition-all flex items-center justify-between ${
               idx === selectedIndex
                 ? "bg-[#F5A623] text-[#004B64] shadow-md"
                 : "hover:bg-[#F5A623]/70 text-[#004B64]"
@@ -27,18 +27,18 @@ export function renderDropdownItems(
         ))}
       </div>
       {/* Nested items for selected category */}
-      <div className="flex flex-col gap-6 min-w-[30rem]">
+      <div className="flex flex-col gap-6 min-w-[10rem]">
         {items[selectedIndex]?.nestedItems ? (
           items[selectedIndex].nestedItems.map((nested: any, nidx: number) => (
             <div
               key={nested.text}
-              className="text-[1.35rem] px-6 py-3 rounded-lg text-[#004B64] bg-transparent font-normal"
+              className="text-[1rem] px-12 py-1 rounded-lg text-[#004B64] bg-transparent font-normal"
             >
               {nested.text}
             </div>
           ))
         ) : (
-          <div className="text-[1.35rem] px-6 py-3 text-[#004B64] opacity-60">
+          <div className="text-[1rem] px-8 py-1 text-[#004B64] opacity-60">
             Sin subcategorías
           </div>
         )}

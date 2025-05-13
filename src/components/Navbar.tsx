@@ -13,18 +13,18 @@ import { renderDropdownItems } from "@/helpers/dropdown-helper";
 export function Navbar() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   return (
-    <nav className="sticky top-0 w-[80rem] bg-[#004B64] h-[5.2rem] flex flex-row justify-between">
-      <div className="flex items-center justify-between max-w-[1200px] h-full px-[2.5rem]">
+    <nav className="sticky top-0 w-[95rem] bg-[#004B64] h-[5.4rem] flex flex-row justify-between">
+      <div className="flex items-center justify-between max-w-[1200px] h-full px-[3rem]">
         {/* Left side: Dropdown and links */}
-        <div className="flex items-center gap-12 text-white text-[1.375rem]">
+        <div className="flex items-center gap-20 text-white text-[1.2rem]">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className="flex items-center gap-1 hover:underline hover:text-[#f5a623]">
                 {navLink.title}
-                <ChevronDown className="size-4" />
+                <ChevronDown className="size-3" />
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[16rem] mt-[1.2rem]">
+            <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[13rem] mt-[1rem]">
               {renderDropdownItems(
                 navLink.dropdownItems,
                 selectedIndex,
@@ -43,7 +43,7 @@ export function Navbar() {
       {/* Right side: Cotizar button */}
       <a
         href="#"
-        className="bg-[#f5a623] text-white font-bold text-center flex items-center text-[1.4rem] justify-center w-[20rem] h-full hover:bg-[#e59820]"
+        className="bg-[#f5a623] text-white font-bold text-center flex items-center text-[1.1rem] justify-center w-[20rem] h-full hover:bg-[#e59820]"
         style={{ clipPath: "polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
       >
         Cotizar
