@@ -38,9 +38,7 @@ export function renderDropdownItems(
             </div>
           ))
         ) : (
-          <div className="text-[1rem] px-8 py-1 text-[#004B64] opacity-60">
-            Sin subcategorías
-          </div>
+          <div className="text-[1rem] px-8 py-1 text-[#004B64] opacity-60"></div>
         )}
       </div>
     </div>

@@ -7,63 +7,37 @@
       "text": "Sistema de recuperación de testigos",
       "nestedItems": [
         { "text": "Pescante" },
-        { "text": "Cabeza de tubo interior" },
-        { "text": "Avanzador de Casings" },
-        { "text": "Cabezales de inyección" },
-        { "text": "Cortador de Casings" },
-        { "text": "Repuestos para tubo interior" }
+        { "text": "Cabeza de tubo interior" }
+        
       ]
     },
     {
-      "text": "Accesorios diamantina"
-    },
-    {
-      "text": "Circulación reversa",
+      "text": "Accesorios diamantina",
       "nestedItems": [
-        { "text": "Amortiguadores RC" },
-        { "text": "Barras sin Cortes" },
-        { "text": "Ciclón" },
-        { "text": "Escariadores" },
-        { "text": "Estabilizador RC" },
-        { "text": "Interchange" },
-        { "text": "Martillo" },
-        { "text": "Porta Tríconos" },
-        { "text": "Swivels" },
-        { "text": "Válvulas Aire Reverso" },
-        { "text": "Zapatas" }
+        { "text": "Adaptadores" },
+        { "text": "Accesorios de diamantina" }
       ]
     },
     {
-      "text": "Estudios geotécnicos",
-      "nestedItems": [{ "text": "Estudio SPT" }, { "text": "Estudio LPT" }]
-    },
-    { "text": "Bombas de agua" },
-    {
-      "text": "Máquinas de perforación",
-      "nestedItems": [
-        { "text": "Prensa inferior" },
-        { "text": "Chuck" },
-        { "text": "Insertos para Mordazas" }
-      ]
+      "text": "Circulación reversa"
     },
     {
-      "text": "Llaves",
-      "nestedItems": [
-        { "text": "Llaves para Boca de Pozo" },
-        { "text": "Mordazas para Llaves Manuales" },
-        { "text": "Afilado de Mordazas de Llaves" }
-      ]
+      "text": "Estudios geotécnicos"
     },
     {
-      "text": "Metalúrgica",
-      "nestedItems": [
-        { "text": "Pileta" },
-        { "text": "Mixer" },
-        { "text": "Zaranda" },
-        { "text": "Trailer" },
-        { "text": "Tanque de Combustible" },
-        { "text": "Caseta de Operador de Campos" }
-      ]
+       "text": "Bombas de agua",
+       "nestedItems": [
+        { "text": "Bombas de agua" }]
+
+    },
+    {
+      "text": "Máquinas de perforación"
+    },
+    {
+      "text": "Llaves"
+    },
+    {
+      "text": "Metalúrgica"
     }
   ]
 }

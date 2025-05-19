@@ -1,9 +1,5 @@
 ---
-const footerImages = [
-  { url: "", path: "/linkedin-footer.svg" },
-  { url: "", path: "/facebook-footer.svg" },
-  { url: "", path: "/whatsapp-footer.svg" },
-];
+const footerImages = [{ url: "", path: "/whatsapp-footer.svg" }];
 const currentYear = new Date().getFullYear();
 ---
 
@@ -20,7 +16,7 @@ const currentYear = new Date().getFullYear();
         <div class="flex flex-row items-center gap-2">
           <img src="/phone-icon.svg" alt="Phone icon" class="h-6" />
           <div class="flex flex-col">
-            <p class="text-[#004B64] font-bold">¡Hola!</p>
+            <p class="text-[#004B64] mt-2 font-bold">¡Hola!</p>
             <p class="text-black font-light">(+54) 0261 4960201</p>
           </div>
         </div>
@@ -33,21 +29,21 @@ const currentYear = new Date().getFullYear();
             mario@explofy.com.ar
           </a>
           <a
-            href="mailto:romina@explofy.com.ar"
+            href="mailto:romi@explofy.com.ar"
             class="font-bold underline text-[#004B64]"
           >
-            romina@explofy.com.ar
+            romi@explofy.com.ar
           </a>
         </div>
 
-        <p class="font-bold text-[#004B64]">
+        <p class="font-regular text-[#004B64]">
           Cristobal Colón 32 (altura de San Martín 6592) Carrodilla, Luján de
           Cuyo Mendoza República Argentina CPM5505FSN
         </p>
       </div>
     </div>
 
-    <div class="col-start-3 flex flex-col gap-2 mr-[115px] ml-[115px]">
+    <div class="col-start-3 flex flex-col gap-2 mr-[115px] ml-[115px] mt-2">
       <a href="" class="text-[#004B64] font-semibold">Menú</a>
       <a href="" class="text-[#004B64] font-regular">Producto</a>
       <a href="" class="text-[#004B64] font-regular">Nosotros</a>
@@ -55,9 +51,9 @@ const currentYear = new Date().getFullYear();
       <a href="" class="text-[#004B64] font-regular">Cotizar</a>
     </div>
 
-    <div class="col-start-4">
+    <div class="col-start-4 mt-2">
       <h3 class="text-[#004B64] font-semibold mb-2">Redes sociales</h3>
-      <div class="flex flex-row gap-2">
+      <div class="flex flex-row gap-2 items-center pl-8">
         {
           footerImages.map((image) => (
             <a href={image.url}>
