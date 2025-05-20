@@ -1,7 +1,25 @@
 ---
+import componentsData from '../assets/ui/components.json';
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  backgroundImage?: string;
+  showCard?: boolean;
+}
+
+const props = Astro.props;
 const heroData = {
-  title: "Repuestos de calidad para equipos mineros",
-  subtitle: "Diseño y fabricación",
+  title: props.title || 'Repuestos de calidad para equipos mineros',
+  subtitle: props.subtitle || 'Diseño y fabricación',
+  backgroundImage:
+    props.backgroundImage ||
+    componentsData.hero?.backgroundImage ||
+    '/hero-bg.svg',
+  showCard:
+    props.showCard !== undefined
+      ? props.showCard
+      : componentsData.hero?.card || true,
 };
 ---
 
@@ -9,22 +27,22 @@ const heroData = {
   <div class="absolute inset-0 z-0">
     <div
       class="w-full h-full bg-cover bg-center"
-      style={{ backgroundImage: "url('/hero-bg.svg')" }}
+      style={{ backgroundImage: `url('${heroData.backgroundImage}')` }}
     >
     </div>
   </div>
-  <div
-    class="absolute left-[11rem] bottom-[5rem] bg-black/10 flex items-center justify-center z-10"
-  >
-    <div class="bg-[#004B6480]/80 h-[19rem] w-[45rem] rounded-md">
-      <h1
-        class="text-[2.8rem] font-bold text-white mt-[4rem] ml-[2.1rem] leading-tight"
-      >
-        {heroData.title}
-      </h1>
-      <p class="text-[2.125rem] text-white mt-[1.375rem] ml-[2rem]">
-        {heroData.subtitle}
-      </p>
-    </div>
-  </div>
+  {
+    heroData.showCard && (
+      <div class="absolute left-[11rem] bottom-[5rem] bg-black/10 flex items-center justify-center z-10">
+        <div class="bg-[#004B6480]/80 h-[19rem] w-[45rem] rounded-md">
+          <h1 class="text-[2.8rem] font-bold text-white mt-[4rem] ml-[2.1rem] leading-tight">
+            {heroData.title}
+          </h1>
+          <p class="text-[2.125rem] text-white mt-[1.375rem] ml-[2rem]">
+            {heroData.subtitle}
+          </p>
+        </div>
+      </div>
+    )
+  }
 </section>

@@ -1,0 +1,65 @@
+{
+  "hero": { "backgroundImage": "/hero-bg.svg", "card": true },
+  "products": {
+    "backgroundImage": "/products/hero.png",
+    "card": false,
+    "title": "Soluciones de Precisión para la Industria Minera",
+    "subtitle": "En Explofy, ofrecemos una amplia gama de productos diseñados con tecnología de vanguardia para optimizar los procesos de perforación y exploración en la industria minera. Nuestra ingeniería de precisión y materiales de alta calidad garantizan soluciones confiables, eficientes y duraderas. Descubre nuestras siete categorías de productos, desarrolladas para maximizar el rendimiento de tus operaciones.",
+    "internalCards": [
+      {
+        "image": "/products/card-1.png",
+        "title": "Test",
+        "subtitle": "Lore ipsum",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/card-2.png",
+        "title": "Test",
+        "subtitle": "Lore ipsum",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/card-3.png",
+
+        "title": "Test",
+        "subtitle": "Lore ipsum",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/card-4.png",
+
+        "title": "Test",
+        "subtitle": "Lore ipsum",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/card-5.png",
+
+        "title": "Test",
+        "subtitle": "Lore ipsum",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/card-6.png",
+
+        "title": "Test",
+        "subtitle": "Lore ipsum",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/card-7.png",
+
+        "title": "Test",
+        "subtitle": "Lore ipsum",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/card-8.png",
+        "title": "Test",
+        "subtitle": "Lore ipsum",
+        "button": "Obtener más información"
+      }
+    ],
+    "ctaCard": true
+  }
+}

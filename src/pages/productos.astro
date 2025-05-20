@@ -1,0 +1,94 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import FeatureCard from '../components/ui/FeatureCard.astro';
+import ProductCard from '../components/ui/ProductCard.astro';
+import QuoteRequestCard from '../components/ui/QuoteRequestCard.astro';
+import componentsData from '../assets/ui/components.json';
+import OverHeader from '@/components/OverHeader.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+const productsData = componentsData.products;
+
+const featureCards = [
+  {
+    icon: '/shared/award_star.svg',
+    title: 'Alta precisión y durabilidad',
+  },
+  {
+    icon: '/shared/manufacturing.svg',
+    title: 'Diseño optimizado para minería',
+  },
+  {
+    icon: '/shared/search.svg',
+    title: 'Soluciones personalizadas',
+  },
+  {
+    icon: '/shared/acute.svg',
+    title: 'Stock permanente y entrega rápida',
+  },
+];
+
+// Product cards will be populated from the JSON data
+const productCards = productsData.internalCards;
+
+// Check if we need to add the quote request card (if odd number of cards)
+const isEvenNumberOfCards = productCards.length % 2 === 0;
+const hasCtaCard = productsData.ctaCard;
+---
+
+<Layout title="Explofy - Productos">
+  <OverHeader />
+  <Header />
+  <Hero
+    title={productsData.title}
+    subtitle="Tecnología de vanguardia para optimizar operaciones"
+    backgroundImage={productsData.backgroundImage || '/hero-bg.svg'}
+    showCard={productsData.card}
+  />
+
+  <section class="container mx-auto px-4 py-16">
+    <div class="max-w-4xl mx-auto text-center mb-16">
+      <h2 class="text-3xl font-bold mb-6">
+        {productsData.title}
+      </h2>
+      <p class="text-gray-700 leading-relaxed font-[300]">
+        {productsData.subtitle}
+      </p>
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="mx-auto">
+      <div
+        class="flex flex-col md:flex-row justify-between gap-6 max-w-6xl mx-auto mb-16"
+      >
+        {
+          featureCards.map((card) => (
+            <FeatureCard icon={card.icon} title={card.title} />
+          ))
+        }
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-bold text-center mb-8 mt-16">
+      Nuestros Productos
+    </h2>
+
+    <!-- Product Cards Grid -->
+    <div class="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {
+        productCards.map((card) => (
+          <ProductCard
+            image={card.image}
+            title={card.title}
+            description={card.subtitle}
+            buttonText={card.button}
+          />
+        ))
+      }
+      {isEvenNumberOfCards && hasCtaCard && <QuoteRequestCard />}
+    </div>
+  </section>
+  <Footer />
+</Layout>

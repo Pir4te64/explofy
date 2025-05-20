@@ -1,5 +1,9 @@
 ---
-const footerImages = [{ url: "", path: "/whatsapp-footer.svg" }];
+const footerImages = [
+  { url: '', path: '/linkedin-footer.svg' },
+  { url: '', path: '/whatsapp-footer.svg' },
+  { url: '', path: '/facebook-footer.svg' },
+];
 const currentYear = new Date().getFullYear();
 ---
 
@@ -53,7 +57,7 @@ const currentYear = new Date().getFullYear();
 
     <div class="col-start-4 mt-2">
       <h3 class="text-[#004B64] font-semibold mb-2">Redes sociales</h3>
-      <div class="flex flex-row gap-2 items-center pl-8">
+      <div class="flex flex-row gap-2 items-center">
         {
           footerImages.map((image) => (
             <a href={image.url}>
