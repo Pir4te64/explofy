@@ -1,5 +1,5 @@
 {
-  "hero": { "backgroundImage": "/hero-bg.svg", "card": true },
+  "hero": { "backgroundImage": "/home/hero-bg.png", "card": true },
   "products": {
     "backgroundImage": "/products/hero.png",
     "card": false,
