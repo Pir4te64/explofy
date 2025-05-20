@@ -48,46 +48,56 @@ const hasCtaCard = productsData.ctaCard;
     showCard={productsData.card}
   />
 
-  <section class="container mx-auto px-4 py-16">
-    <div class="max-w-4xl mx-auto text-center mb-16">
-      <h2 class="text-3xl font-bold mb-6">
-        {productsData.title}
-      </h2>
-      <p class="text-gray-700 leading-relaxed font-[300]">
-        {productsData.subtitle}
-      </p>
-    </div>
+  <section class="py-16">
+    <div class="w-[95rem] mx-auto">
+      <div class="w-full text-center mb-16">
+        <h2 class="text-3xl font-bold mb-6">
+          {productsData.title}
+        </h2>
+        <p class="text-gray-700 leading-relaxed font-[300]">
+          {productsData.subtitle}
+        </p>
+      </div>
 
-    <!-- Feature Cards -->
-    <div class="mx-auto">
-      <div
-        class="flex flex-col md:flex-row justify-between gap-6 max-w-6xl mx-auto mb-16"
-      >
+      <!-- Feature Cards -->
+      <div class="w-full">
+        <div
+          class="flex flex-col md:flex-row justify-between gap-12 w-full mb-16"
+        >
+          {
+            featureCards.map((card) => (
+              <div class="flex-1 p-6 flex justify-center">
+                <FeatureCard icon={card.icon} title={card.title} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold text-center mb-8 mt-16">
+        Nuestros Productos
+      </h2>
+
+      <!-- Product Cards Grid -->
+      <div class="grid grid-cols-3 gap-12 w-full">
         {
-          featureCards.map((card) => (
-            <FeatureCard icon={card.icon} title={card.title} />
+          productCards.map((card) => (
+            <div class="p-4">
+              <ProductCard
+                image={card.image}
+                title={card.title}
+                description={card.subtitle}
+                buttonText={card.button}
+              />
+            </div>
           ))
         }
+        {isEvenNumberOfCards && hasCtaCard && (
+          <div class="p-4">
+            <QuoteRequestCard />
+          </div>
+        )}
       </div>
-    </div>
-
-    <h2 class="text-2xl font-bold text-center mb-8 mt-16">
-      Nuestros Productos
-    </h2>
-
-    <!-- Product Cards Grid -->
-    <div class="grid grid-cols-3 gap-8 max-w-6xl mx-auto">
-      {
-        productCards.map((card) => (
-          <ProductCard
-            image={card.image}
-            title={card.title}
-            description={card.subtitle}
-            buttonText={card.button}
-          />
-        ))
-      }
-      {isEvenNumberOfCards && hasCtaCard && <QuoteRequestCard />}
     </div>
   </section>
   <Footer />

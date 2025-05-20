@@ -8,55 +8,55 @@
     "internalCards": [
       {
         "image": "/products/card-1.png",
-        "title": "Test",
-        "subtitle": "Lore ipsum",
+        "title": "Sistema de Recuperación de Testigos",
+        "subtitle": "Soluciones para la extracción eficiente de testigos en exploración minera, garantizando integridad y precisión en la recuperación.",
         "button": "Obtener más información"
       },
       {
         "image": "/products/card-2.png",
-        "title": "Test",
-        "subtitle": "Lore ipsum",
+        "title": "Accesorios Diamantina",
+        "subtitle": "Componentes esenciales para perforación diamantina, diseñados para optimizar rendimiento y seguridad en cada operación.",
         "button": "Obtener más información"
       },
       {
         "image": "/products/card-3.png",
 
-        "title": "Test",
-        "subtitle": "Lore ipsum",
+        "title": "Circulación Reversa",
+        "subtitle": "Equipos especializados que mejoran la eficiencia del flujo y la extracción de material en perforaciones con aire reverso.",
         "button": "Obtener más información"
       },
       {
         "image": "/products/card-4.png",
 
-        "title": "Test",
-        "subtitle": "Lore ipsum",
+        "title": "Estudios Geotécnicos",
+        "subtitle": "Herramientas y equipos para estudios SPT y LPT, fundamentales en la evaluación del terreno y estabilidad del suelo.",
         "button": "Obtener más información"
       },
       {
         "image": "/products/card-5.png",
 
-        "title": "Test",
-        "subtitle": "Lore ipsum",
+        "title": "Bomba de agua",
+        "subtitle": "Circulación continua de fluidos para enfriar brocas, reducir fricción y garantizar perforación eficiente.",
         "button": "Obtener más información"
       },
       {
         "image": "/products/card-6.png",
 
-        "title": "Test",
-        "subtitle": "Lore ipsum",
+        "title": "Componentes de máquinas de perforación",
+        "subtitle": "Repuestos y accesorios de alta precisión para mejorar el desempeño y la durabilidad de maquinaria de perforación.",
         "button": "Obtener más información"
       },
       {
         "image": "/products/card-7.png",
 
-        "title": "Test",
-        "subtitle": "Lore ipsum",
+        "title": "Llaves",
+        "subtitle": "Llaves de alta resistencia y mordazas especializadas para garantizar un ajuste seguro y eficiente en perforaciones.",
         "button": "Obtener más información"
       },
       {
         "image": "/products/card-8.png",
-        "title": "Test",
-        "subtitle": "Lore ipsum",
+        "title": "Metalúrgica",
+        "subtitle": "Estructuras y componentes diseñados a medida, desde tanques de combustible hasta trailers, optimizando el soporte logístico en minería.",
         "button": "Obtener más información"
       }
     ],
