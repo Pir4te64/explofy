@@ -1,16 +1,14 @@
+import type { DropdownItem } from '../lib/interfaces';
+
 export function renderDropdownItems(
-  items: any[],
+  items: DropdownItem[],
   selectedIndex: number,
   setSelectedIndex: (idx: number) => void
 ) {
-  // Helper function to handle navigation
-  const navigateToCategory = (item: any) => {
-    // You can replace this with your actual navigation logic
-    // For example, using a specific URL format for each category
+  const navigateToCategory = (item: DropdownItem) => {
     const categorySlug = item.text.toLowerCase().replace(/\s+/g, '-');
     window.location.href = `/productos/categoria/${categorySlug}`;
   };
-
   return (
     <div className="flex flex-row w-[70rem] bg-[#CCD9DF] rounded-xl border border-[#B49AFF] shadow-lg p-8 gap-2">
       {/* Main categories */}
@@ -38,24 +36,20 @@ export function renderDropdownItems(
       {/* Nested items for selected category */}
       <div className="flex flex-col gap-6 min-w-[10rem]">
         {items[selectedIndex]?.nestedItems ? (
-          items[selectedIndex].nestedItems.map((nested: any, nidx: number) => (
-            <button
-              key={nested.text}
-              className="text-[1rem] px-12 py-1 rounded-lg text-[#004B64] bg-transparent font-normal hover:bg-[#F5A623]/30 text-left"
-              onClick={() => {
-                // Navigate to subcategory page
-                const categorySlug = items[selectedIndex].text
-                  .toLowerCase()
-                  .replace(/\s+/g, '-');
-                const subcategorySlug = nested.text
-                  .toLowerCase()
-                  .replace(/\s+/g, '-');
-                window.location.href = `/productos/categoria/${categorySlug}/${subcategorySlug}`;
-              }}
-            >
-              {nested.text}
-            </button>
-          ))
+          items[selectedIndex].nestedItems.map(
+            (nested: { text: string }, nidx: number) => (
+              <button
+                key={nested.text}
+                className="text-[1rem] px-12 py-1 rounded-lg text-[#004B64] bg-transparent font-normal hover:bg-[#F5A623]/30 text-left"
+                onClick={() => {
+                  const subcategorySlug = nested.text.replace(/\s+/g, '-');
+                  window.location.href = `/productos/${subcategorySlug}`;
+                }}
+              >
+                {nested.text}
+              </button>
+            )
+          )
         ) : (
           <div className="text-[1rem] px-8 py-1 text-[#004B64] opacity-60"></div>
         )}

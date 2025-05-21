@@ -83,7 +83,6 @@
       },
       {
         "image": "/products/avanzador-casings.png",
-
         "title": "Avanzador de Casings",
         "subtitle": "En terrenos con desmoronamiento, este equipo nos permite realizar en simultáneo la perforación del pozo junto con el encamisado del mismo.",
         "button": "Obtener más información"
@@ -108,6 +107,24 @@
         "title": "Repuestos de tubo interior",
         "subtitle": "Componentes de alta calidad para la obtención de la muestra de perforación.",
         "button": "Obtener más información"
+      }
+    ]
+  },
+  "Pescante": {
+    "backgroundImage": "/stock/producto.png",
+    "card": true,
+    "title": "Pescante",
+    "subtitle": "Este conjunto se utiliza para facilitar la extracción de muestras del subsuelo de manera rápida y eficaz. Acopla el tubo interior con la barra de perforación y permite el avance de los dos componentes en conjunto y la posterior extracción del tubo interior junto con la muestra de suelo. Este diseño permite la circulación de fluidos, lo que ayuda a la refrigeración de la broca y el transporte de los recortes de roca hacia la superficie.",
+    "internalCards": [
+      {
+        "title": "Seguridad y Eficiencia en la Recuperación de Testigos",
+        "paragraph": "Fabricado con materiales de alta resistencia, garantiza durabilidad y un desempeño confiable en condiciones extremas, minimizando riesgos y optimizando la seguridad en el proceso de extracción.",
+        "cardIcon": "/ruler.svg",
+        "text": "Diseños",
+        "description": "Creamos modelos según las necesidades del cliente.",
+        "subDescription": "Medidas: NI - NIU - HIU - PI",
+        "image": "/products/pescante-big.png",
+        "layout": "left-text-card-left-right-image"
       }
     ]
   }

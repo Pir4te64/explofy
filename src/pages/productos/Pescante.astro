@@ -1,0 +1,95 @@
+---
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
+import Hero from '@/components/Hero.astro';
+import OverHeader from '@/components/OverHeader.astro';
+import Layout from '@/layouts/Layout.astro';
+import componentsData from '../../assets/ui/components.json';
+
+const productsData = componentsData.Pescante;
+const gridData = componentsData.Pescante.internalCards;
+---
+
+<Layout>
+  <OverHeader />
+  <Header />
+  <Hero
+    title={`${productsData.title}`}
+    backgroundImage={productsData.backgroundImage || '/hero-bg.svg'}
+    showCard={productsData.card}
+    ctaButton={true}
+    showBreadCrumbs={true}
+    parentComponent="sistema-de-recuperacion-testigos"
+  />
+  <section class="py-24">
+    <div class="w-[70rem] mx-auto">
+      <div class="w-full text-center mb-16">
+        <h2 class="text-3xl font-bold mb-6">
+          {productsData.title}
+        </h2>
+        <p class="leading-relaxed font-[300]">
+          {productsData.subtitle}
+        </p>
+      </div>
+
+      {
+        gridData.map((card) => (
+          <div class="flex flex-col md:flex-row gap-8 mt-16 items-start">
+            {/* Left Side Container - taking same height as image */}
+            <div class="md:w-1/2 flex flex-col h-[43rem] justify-between">
+              {/* Text section - top half */}
+              <div class="mb-6 h-[20rem] overflow-auto">
+                <h3 class="text-2xl font-semibold mb-4">{card.title}</h3>
+                <p class="leading-10 font-light text-black">{card.paragraph}</p>
+              </div>
+
+              {/* Card section - bottom half */}
+              <div class="bg-white rounded-lg shadow-md p-8 flex border border-gray-100 flex-col justify-center items-center flex-grow">
+                <div class="mb-4">
+                  <img src={card.cardIcon} alt="Icon" class="w-14 h-14" />
+                </div>
+                <div class="items-center text-center">
+                  <h4 class="text-xl font-medium text-[#EDA732] mb-3">
+                    {card.text}
+                  </h4>
+                  <p class="text-sm text-[#414141] leading-3 font-light mb-2">
+                    {card.description}
+                  </p>
+                  {card.subDescription && (
+                    <p class="text-sm text-[#414141] font-light">
+                      {card.subDescription}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* Image on the right */}
+            <div class="md:w-1/2">
+              <img src={card.image} alt={card.title} class="w-full h-[43rem]" />
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </section>
+  <section class="py-8 flex flex-col justify-center items-center bg-[#D0DBE0]">
+    <h2 class="text-[#000929] font-bold text-[36px] text-center my-4 mb-[38px]">
+      Solicita tu Cotización en Simples Pasos
+    </h2>
+    <h3 class="font-light text-center text-[20px]">
+      Obtén la mejor solución para tu proyecto de manera rápida y sencilla.
+      Sigue estos tres pasos y recibe una cotización personalizada en poco
+      tiempo.
+    </h3>
+    <img src="/flow-card.svg" class="mt-[80px] mb-[80px]" />
+    <a href="mailto:mario@explofy.com.ar">
+      <button
+        class="bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 rounded-lg text-[#000929] min-w-[230px] min-h-[45px] text-[18px]"
+      >
+        Contactar
+      </button>
+    </a>
+  </section>
+  <Footer />
+</Layout>
