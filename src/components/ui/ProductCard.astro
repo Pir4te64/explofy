@@ -26,7 +26,7 @@ const {
       {description}
     </p>
     <a
-      href={`/productos/${title}`}
+      href={`/productos/${title.toLowerCase().replace(/\s+/g, '-')}`}
       class="text-sm text-[#F5A623] font-light text-left mt-0 hover:text-[#e59820]"
       style="text-underline-offset: 3px;"
     >
