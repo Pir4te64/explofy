@@ -7,7 +7,7 @@ export function renderDropdownItems(
 ) {
   const navigateToCategory = (item: DropdownItem) => {
     const categorySlug = item.text.toLowerCase().replace(/\s+/g, '-');
-    window.location.href = `/productos/categoria/${categorySlug}`;
+    window.location.href = `/productos/${categorySlug}`;
   };
   return (
     <div className="flex flex-row w-[70rem] bg-[#CCD9DF] rounded-xl border border-[#B49AFF] shadow-lg p-8 gap-2">

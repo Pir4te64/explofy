@@ -91,7 +91,7 @@ const breadcrumbs = generateBreadcrumbs();
                     class={`hover:text-[#f5a623] flex items-center ${index === breadcrumbs.length - 1 ? 'font-semibold' : 'font-light'}`}
                   >
                     {index === 0 && <Home class="size-4 mr-1" />}
-                    {crumb.name}
+                    {crumb.name.toLowerCase().replace(/\s+/g, '-')}
                   </a>
                 </>
               ))}
