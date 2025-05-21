@@ -6,7 +6,12 @@ export function renderDropdownItems(
   setSelectedIndex: (idx: number) => void
 ) {
   const navigateToCategory = (item: DropdownItem) => {
-    const categorySlug = item.text.toLowerCase().replace(/\s+/g, '-');
+    const categorySlug = item.text
+      .toLowerCase()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '-');
     window.location.href = `/productos/${categorySlug}`;
   };
   return (
@@ -44,6 +49,8 @@ export function renderDropdownItems(
                 onClick={() => {
                   const subcategorySlug = nested.text
                     .toLowerCase()
+                    .normalize('NFD')
+                    .replace(/[\u0300-\u036f]/g, '')
                     .replace(/\s+/g, '-');
                   window.location.href = `/productos/${subcategorySlug}`;
                 }}
