@@ -61,7 +61,7 @@ export function Navbar() {
           <a href="#" className="hover:underline hover:text-[#f5a623]">
             Nosotros
           </a>
-          <a href="#" className="hover:underline hover:text-[#f5a623]">
+          <a href="/contacto" className="hover:underline hover:text-[#f5a623]">
             Contacto
           </a>
         </div>

@@ -61,5 +61,54 @@
       }
     ],
     "ctaCard": true
+  },
+  "contact": { "backgroundImage": "/contact/hero.png", "card": false },
+  "sistema-de-recuperacion-testigos": {
+    "backgroundImage": "/stock/producto.png",
+    "card": false,
+    "title": "Sistema de Recuperación de Testigos",
+    "subtitle": "El Sistema de Tubo Interior es clave en la perforación diamantina, recuperando testigos con precisión y datos confiables. Diseñado para condiciones extremas, combina durabilidad y eficiencia. También reduce costos y tiempos de inactividad, optimizando las operaciones mineras. Explofy garantiza fabricaciones de alta confiabilidad, ofreciendo experiencia y trayectoria en la industria minera.",
+    "internalCards": [
+      {
+        "image": "/products/pescante.png",
+        "title": "Pescante",
+        "subtitle": "Herramienta esencial para la extracción del sistema de tubo interior.",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/cabeza-tubo-interior.png",
+        "title": "Cabeza de tubo interior",
+        "subtitle": "Conjunto fundamental para lograr el avance del tubo interior junto con el tren de perforación y su posterior retiro de manera independiente.",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/avanzador-casings.png",
+
+        "title": "Avanzador de Casings",
+        "subtitle": "En terrenos con desmoronamiento, este equipo nos permite realizar en simultáneo la perforación del pozo junto con el encamisado del mismo.",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/cabezales-inyeccion.png",
+
+        "title": "Cabezales de inyección",
+        "subtitle": "Permiten la inyección de agua o lodo de perforación además de soportar el peso del tren de barras.",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/cortador-casings.png",
+
+        "title": "Cortador de Casings",
+        "subtitle": "Herramienta utilizada para corte de barras atascadas en el pozo.",
+        "button": "Obtener más información"
+      },
+      {
+        "image": "/products/repuestos-tubo-interior.png",
+
+        "title": "Repuestos de tubo interior",
+        "subtitle": "Componentes de alta calidad para la obtención de la muestra de perforación.",
+        "button": "Obtener más información"
+      }
+    ]
   }
 }

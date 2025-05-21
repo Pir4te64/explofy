@@ -1,0 +1,236 @@
+---
+import OverHeader from '@/components/OverHeader.astro';
+import Layout from '@/layouts/Layout.astro';
+import Header from '@/components/Header.astro';
+import Hero from '@/components/Hero.astro';
+import Footer from '@/components/Footer.astro';
+import componentsData from '../assets/ui/components.json';
+
+const mapCoordinates = {
+  lat: -32.9628,
+  lng: -68.8464,
+  zoom: 15,
+};
+
+const contactData = componentsData.contact;
+const contactCards = [
+  {
+    icon: '/contact/mail-icon.svg',
+    title: 'Correo electrónico',
+    paragraph: ['mario@explofy.com.ar', 'romina@explofy.com.ar'],
+    redirect: ['mailto:mario@explofy.com.ar', 'mailto:romina@explofy.com.ar'],
+  },
+  {
+    icon: '/contact/phone-icon.svg',
+    title: '¡Hola!',
+    paragraph: ['(+54) 0261 496 0201'],
+    redirect: ['tel:(+54) 0261 496 0201'],
+  },
+  {
+    icon: '/contact/map-icon.svg',
+    title: 'Dirección',
+    paragraph: [
+      'Colón 32 (altura de San Martín 6592) Carrodilla, Luján de Cuyo, Mendoza, Argentina. CP. M5505FSN',
+    ],
+  },
+];
+---
+
+<Layout title="Explofy - Contacto">
+  <OverHeader />
+  <Header />
+  <Hero
+    title=""
+    subtitle=""
+    backgroundImage={contactData.backgroundImage}
+    showCard={contactData.card}
+  />
+  <section class="py-16">
+    <div class="container max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full mb-16">
+        {
+          contactCards.map((info) => (
+            <div class="rounded-2xl bg-white shadow-md p-6 mb-8 h-full flex flex-row items-center gap-4">
+              <img src={info.icon} alt={info.title} class="size-20" />
+              <div class="flex flex-col">
+                <h2 class="font-semibold text-xl mb-2">{info.title}</h2>
+                <a
+                  href={info.redirect?.[0] ?? '#'}
+                  class="font-light text-gray-600 hover:text-[#f5a623]"
+                >
+                  {info.paragraph[0]}
+                </a>
+                {info.paragraph[1] && (
+                  <a
+                    href={info.redirect?.[1] ?? '#'}
+                    class="font-light text-gray-600 hover:text-[#f5a623]"
+                  >
+                    {info.paragraph[1]}
+                  </a>
+                )}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <!-- Left side: Text content -->
+        <div class="md:w-1/2">
+          <h2 class="text-3xl font-bold mb-4">
+            ¿Estás interesado en cotizar los productos de Explofy?
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Dejanos tus datos, y nos estaremos comunicando para el asesoramiento
+            personalizado.
+          </p>
+          <a
+            href="#"
+            class="inline-flex items-center px-24 py-2 bg-[#f5a623] text-white font-medium rounded-lg hover:bg-[#e59820] transition-colors"
+          >
+            Saber más
+          </a>
+        </div>
+
+        <!-- Right side: Contact form -->
+        <div class="md:w-1/2">
+          <form class="bg-white rounded-xl shadow-lg p-8">
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div>
+                <label
+                  for="nombre"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Nombre</label
+                >
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f5a623]"
+                  placeholder="Ingresa tu nombre"
+                />
+              </div>
+              <div>
+                <label
+                  for="apellido"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Apellido</label
+                >
+                <input
+                  type="text"
+                  id="apellido"
+                  name="apellido"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f5a623]"
+                  placeholder="Ingresa tu apellido"
+                />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4 mb-4">
+              <div>
+                <label
+                  for="email"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f5a623]"
+                  placeholder="correo@ejemplo.com"
+                />
+              </div>
+              <div>
+                <label
+                  for="telefono"
+                  class="block text-sm font-medium text-gray-700 mb-1"
+                  >Teléfono</label
+                >
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f5a623]"
+                  placeholder="+54 XXX XXX XXXX"
+                />
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="mensaje"
+                class="block text-sm font-medium text-gray-700 mb-1"
+                >Mensaje</label
+              >
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                rows="4"
+                class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#f5a623]"
+                placeholder="Escribe tu consulta aquí..."></textarea>
+            </div>
+
+            <div class="flex justify-end">
+              <button
+                type="submit"
+                class="px-32 py-2 bg-[#f5a623] text-white font-medium rounded-lg hover:bg-[#003a4f] transition-colors"
+              >
+                Enviar
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section - Full Width -->
+  <section id="map-section" class="w-full">
+    <div id="map" class="w-full h-[500px]"></div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<script is:inline>
+  document.head.insertAdjacentHTML(
+    'beforeend',
+    '<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />'
+  );
+
+  const script = document.createElement('script');
+  script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+  script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+  script.crossOrigin = '';
+  script.onload = function () {
+    initMap();
+  };
+  document.head.appendChild(script);
+
+  function initMap() {
+    const map = L.map('map').setView([-32.9628, -68.8464], 15);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution:
+        '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+    }).addTo(map);
+
+    const marker = L.marker([-32.9628, -68.8464]).addTo(map);
+
+    marker
+      .bindPopup(
+        '<strong>Explofy</strong><br>' +
+          'Colón 32 (altura de San Martín 6592)<br>' +
+          'Carrodilla, Luján de Cuyo<br>' +
+          'Mendoza, Argentina<br>' +
+          'CP. M5505FSN'
+      )
+      .openPopup();
+
+    window.addEventListener('resize', function () {
+      map.invalidateSize();
+    });
+  }
+</script>

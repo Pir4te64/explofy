@@ -1,0 +1,85 @@
+---
+import Header from '@/components/Header.astro';
+import Hero from '@/components/Hero.astro';
+import OverHeader from '@/components/OverHeader.astro';
+import Layout from '@/layouts/Layout.astro';
+import componentsData from '../../../assets/ui/components.json';
+import FeatureCard from '@/components/ui/FeatureCard.astro';
+import ProductCard from '@/components/ui/ProductCard.astro';
+import Footer from '@/components/Footer.astro';
+
+const productsData = componentsData['sistema-de-recuperacion-testigos'];
+const featureCards = [
+  {
+    icon: '/shared/award_star.svg',
+    title: 'Alta precisión y durabilidad',
+  },
+  {
+    icon: '/shared/manufacturing.svg',
+    title: 'Diseño optimizado para minería',
+  },
+  {
+    icon: '/shared/search.svg',
+    title: 'Soluciones personalizadas',
+  },
+  {
+    icon: '/shared/acute.svg',
+    title: 'Stock permanente y entrega rápida',
+  },
+];
+const productCards = productsData.internalCards;
+---
+
+<Layout title="Explofy - Productos">
+  <OverHeader />
+  <Header />
+  <Hero
+    title={productsData.title}
+    subtitle="Tecnología de vanguardia para optimizar operaciones"
+    backgroundImage={productsData.backgroundImage || '/hero-bg.svg'}
+    showCard={productsData.card}
+  />
+
+  <section class="py-16">
+    <div class="w-[95rem] mx-auto">
+      <div class="w-full text-center mb-16">
+        <h2 class="text-3xl font-bold mb-6">
+          {productsData.title}
+        </h2>
+        <p class="text-gray-700 leading-relaxed font-[300]">
+          {productsData.subtitle}
+        </p>
+      </div>
+      <!-- Feature Cards -->
+      <div class="w-full">
+        <div
+          class="flex flex-col md:flex-row justify-between gap-12 w-full mb-16"
+        >
+          {
+            featureCards.map((card) => (
+              <div class="flex-1 p-6 flex justify-center">
+                <FeatureCard icon={card.icon} title={card.title} />
+              </div>
+            ))
+          }
+        </div>
+      </div>
+      <!-- Product Cards Grid -->
+      <div class="grid grid-cols-3 gap-12 w-full">
+        {
+          productCards.map((card) => (
+            <div class="p-4">
+              <ProductCard
+                image={card.image}
+                title={card.title}
+                description={card.subtitle}
+                buttonText={card.button}
+              />
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+  <Footer />
+</Layout>
