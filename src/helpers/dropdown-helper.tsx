@@ -42,7 +42,9 @@ export function renderDropdownItems(
                 key={nested.text}
                 className="text-[1rem] px-12 py-1 rounded-lg text-[#004B64] bg-transparent font-normal hover:bg-[#F5A623]/30 text-left"
                 onClick={() => {
-                  const subcategorySlug = nested.text.replace(/\s+/g, '-');
+                  const subcategorySlug = nested.text
+                    .toLowerCase()
+                    .replace(/\s+/g, '-');
                   window.location.href = `/productos/${subcategorySlug}`;
                 }}
               >
