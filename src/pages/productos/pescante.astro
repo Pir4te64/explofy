@@ -22,9 +22,9 @@ const gridData = componentsData.Pescante.internalCards;
     parentComponent="sistema-de-recuperacion-testigos"
   />
   <section class="py-24">
-    <div class="w-[70rem] mx-auto">
-      <div class="w-full text-center mb-16">
-        <h2 class="text-3xl font-bold mb-6">
+    <div class="w-[95rem] mx-auto">
+      <div class="w-full text-left mb-16">
+        <h2 class="text-3xl font-bold mb-6 text-center">
           {productsData.title}
         </h2>
         <p class="leading-relaxed font-[300]">
@@ -44,20 +44,20 @@ const gridData = componentsData.Pescante.internalCards;
               </div>
 
               {/* Card section - bottom half */}
-              <div class="bg-white rounded-lg shadow-md p-8 flex border border-gray-100 flex-col justify-center items-center flex-grow">
+              <div class="bg-white rounded-lg shadow-md p-8 flex border border-gray-100 flex-col justify-center items-center flex-grow mt-2 max-w-2xl w-full">
                 <div class="mb-4">
                   <img src={card.cardIcon} alt="Icon" class="w-14 h-14" />
                 </div>
-                <div class="items-center text-center">
+                <div class="items-center text-center w-full">
                   <h4 class="text-xl font-medium text-[#EDA732] mb-3">
                     {card.text}
                   </h4>
-                  <p class="text-sm text-[#414141] leading-3 font-light mb-2">
-                    {card.description}
+                  <p class="text-[#414141] font-light mb-2">
+                    Creamos modelos según las necesidades del cliente.
                   </p>
                   {card.subDescription && (
-                    <p class="text-sm text-[#414141] font-light">
-                      {card.subDescription}
+                    <p class="text-[#414141] font-semibold">
+                      <span class="font-bold">Medidas:</span> {card.subDescription}
                     </p>
                   )}
                 </div>
