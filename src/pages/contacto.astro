@@ -46,11 +46,11 @@ const contactCards = [
     showCard={contactData.card}
   />
   <section class="py-16">
-    <div class="container max-w-6xl mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 w-full mb-16">
+    <div class="w-[95rem] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mb-16">
         {
           contactCards.map((info) => (
-            <div class="rounded-2xl bg-white shadow-md p-6 mb-8 h-full flex flex-row items-center gap-4">
+            <div class="rounded-2xl bg-white shadow-md p-6 mb-8 h-full flex flex-row items-center gap-4 w-full">
               <img src={info.icon} alt={info.title} class="size-20" />
               <div class="flex flex-col">
                 <h2 class="font-semibold text-xl mb-2">{info.title}</h2>
@@ -74,13 +74,13 @@ const contactCards = [
         }
       </div>
 
-      <div class="flex flex-col md:flex-row gap-8 items-start">
+      <div class="flex flex-col md:flex-row gap-8 items-start w-full">
         <!-- Left side: Text content -->
-        <div class="md:w-1/2">
-          <h2 class="text-3xl font-bold mb-4">
+        <div class="md:w-1/2 text-left">
+          <h2 class="text-3xl font-bold mb-4 text-left">
             ¿Estás interesado en cotizar los productos de Explofy?
           </h2>
-          <p class="text-gray-600 mb-6">
+          <p class="text-gray-600 mb-6 text-left">
             Dejanos tus datos, y nos estaremos comunicando para el asesoramiento
             personalizado.
           </p>
