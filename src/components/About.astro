@@ -1,66 +1,74 @@
 ---
 const cardsData = [
   {
-    img: "/card-1.svg",
-    title: "El acero nos une",
+    img: '/card-1.svg',
+    title: 'El acero nos une',
     paragraph:
-      "Expertos en aceros de perforación y repuestos para aire reverso, convencional y diamantina.",
+      'Expertos en aceros de perforación y repuestos para aire reverso, convencional y diamantina.',
   },
   {
-    img: "/card-2.svg",
-    title: "Impulsados por un propósito",
+    img: '/card-2.svg',
+    title: 'Impulsados por un propósito',
     paragraph:
-      "Nuestra mision es clara, trabajar juntos para desarrollar soluciones efectivas que se traduzcan en mejores repuestos",
+      'Nuestra mision es clara, trabajar juntos para desarrollar soluciones efectivas que se traduzcan en mejores repuestos',
   },
   {
-    img: "/card-3.svg",
-    title: "Fuerza en unidad",
+    img: '/card-3.svg',
+    title: 'Fuerza en unidad',
     paragraph:
-      "Creemos en el trabajo colaborativo para ofrecer respuestas sólidas y confiables a tu empresa.",
+      'Creemos en el trabajo colaborativo para ofrecer respuestas sólidas y confiables a tu empresa.',
   },
   {
-    img: "/card-4.svg",
-    title: "Soluciones en metal",
+    img: '/card-4.svg',
+    title: 'Soluciones en metal',
     paragraph:
-      "Diseñamos estructuras y componentes metalúrgicos a medida con precisión, innovación y calidad.",
+      'Diseñamos estructuras y componentes metalúrgicos a medida con precisión, innovación y calidad.',
   },
 ];
 ---
 
-<section class="relative z-2 mt-16">
-  <div class="w-[95rem] mx-auto">
-    <div class="grid grid-cols-1 lg:[grid-template-columns:1.2fr_1fr_1.2fr] gap-4 items-start">
+<section class="relative z-2 mt-[clamp(4rem,8vw,4rem)]">
+  <div class="container-fluid">
+    <div
+      class="grid grid-cols-1 lg:[grid-template-columns:1.2fr_1fr_1.2fr] gap-[clamp(1rem,2vw,1rem)] items-start"
+    >
       <div class="lg:col-span-2">
-        <h2 class="text-[#000929] text-3xl md:text-[36px] font-bold">
+        <h2
+          class="text-[#000929] text-[clamp(1.875rem,4.5vw,2.25rem)] font-bold"
+        >
           Somos la Fábrica
         </h2>
 
         <div
-          class="h-[2px] w-3/4 my-4 md:my-10 bg-[#D9D9D9] relative overflow-hidden"
+          class="h-[clamp(0.125rem,0.25vw,0.125rem)] w-3/4 my-[clamp(1rem,2.5vw,2.5rem)] bg-[#D9D9D9] relative overflow-hidden"
         >
           <div class="absolute top-0 left-0 h-full w-1/4 bg-yellow-500"></div>
         </div>
 
-        <p class="text-sm md:text-[18px] font-light mb-20">
+        <p
+          class="text-[clamp(0.875rem,1.5vw,1.125rem)] font-light mb-[clamp(5rem,10vw,5rem)]"
+        >
           Somos una fábrica de ingeniería de precisión que fabrica repuestos
           para equipos de la industria minera. Tenemos un equipo técnico
           altamente especializado para suministrar productos de calidad.
         </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 gap-[clamp(0.5rem,1vw,0.5rem)]"
+        >
           {
             cardsData.map((card) => (
-              <div class="flex flex-row items-start p-2 mr-10">
+              <div class="flex flex-row items-start p-[clamp(0.5rem,1vw,0.5rem)] mr-[clamp(2.5rem,5vw,2.5rem)]">
                 <img
                   src={card.img}
                   alt="logo"
-                  class="mr-7 w-6 h-6 md:w-12 md:h-12 flex-shrink-0"
+                  class="mr-[clamp(1.75rem,3.5vw,1.75rem)] w-[clamp(1.5rem,3vw,3rem)] h-[clamp(1.5rem,3vw,3rem)] flex-shrink-0"
                 />
                 <div class="flex flex-col">
-                  <h3 class="text-base md:text-[18px] font-semibold mb-2">
+                  <h3 class="text-[clamp(1rem,1.5vw,1.125rem)] font-semibold mb-[clamp(0.5rem,1vw,0.5rem)]">
                     {card.title}
                   </h3>
-                  <p class="text-sm md:text-[15px] font-light">
+                  <p class="text-[clamp(0.875rem,1.25vw,0.9375rem)] font-light">
                     {card.paragraph}
                   </p>
                 </div>
@@ -70,38 +78,42 @@ const cardsData = [
         </div>
       </div>
 
-      <div class="w-full flex justify-end col-span-1 lg:col-start-3 lg:row-start-1 mt-2">
+      <div
+        class="w-full flex justify-end col-span-1 lg:col-start-3 lg:row-start-1 mt-[clamp(0.5rem,1vw,0.5rem)]"
+      >
         <img
           src="/img-card.svg"
           alt="factory image"
-          class="h-auto w-[380px] object-cover rounded-xl"
+          class="h-auto w-[clamp(20rem,38vw,23.75rem)] object-cover rounded-xl"
         />
       </div>
 
       <div
-        class="col-span-3 items-center bg-[#D0DBE0] p-6 md:p-10 rounded-xl mb-18 space-y-4 mt-30 lg:mt-40"
+        class="col-span-3 items-center bg-[#D0DBE0] p-[clamp(1.5rem,2.5vw,2.5rem)] rounded-xl mb-[clamp(4.5rem,9vw,4.5rem)] space-y-[clamp(1rem,2vw,1rem)] mt-[clamp(7.5rem,20vw,10rem)]"
       >
-        <h2 class="text-[#000929] text-2xl md:text-[34px] font-bold">
+        <h2
+          class="text-[#000929] text-[clamp(1.5rem,3.4vw,2.125rem)] font-bold"
+        >
           Solicita tu cotización personalizada
         </h2>
-        <p class="text-lg md:text-[20px] font-light">
+        <p class="text-[clamp(1.125rem,2vw,1.25rem)] font-light">
           Cuéntanos tus necesidades y te brindaremos la mejor opción.
         </p>
         <div
-          class="flex flex-col md:flex-row gap-2 justify-center items-center"
+          class="flex flex-col md:flex-row gap-[clamp(0.5rem,1vw,0.5rem)] justify-center items-center"
         >
           <button
-            class="bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 text-black px-25 py-3 font-bold rounded-md w-full md:w-auto text-center"
+            class="bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 text-black px-[clamp(6.25rem,12.5vw,6.25rem)] py-[clamp(0.75rem,1.5vw,0.75rem)] font-bold rounded-md w-full md:w-auto text-center text-[clamp(0.875rem,1.5vw,1rem)]"
           >
             ¡Diseña tu producto personalizado ahora!
           </button>
           <button
-            class="bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 text-black px-25 py-3 font-bold rounded-md w-full md:w-auto text-center"
+            class="bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 text-black px-[clamp(6.25rem,12.5vw,6.25rem)] py-[clamp(0.75rem,1.5vw,0.75rem)] font-bold rounded-md w-full md:w-auto text-center text-[clamp(0.875rem,1.5vw,1rem)]"
           >
             ¡Solicita tu presupuesto de metalúrgica ya!
           </button>
           <button
-            class="bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 text-black px-25 py-3 font-bold rounded-md w-full md:w-auto text-center"
+            class="bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 text-black px-[clamp(6.25rem,12.5vw,6.25rem)] py-[clamp(0.75rem,1.5vw,0.75rem)] font-bold rounded-md w-full md:w-auto text-center text-[clamp(0.875rem,1.5vw,1rem)]"
           >
             ¡Haz tu pedido de repuestos hoy mismo!
           </button>
@@ -111,5 +123,7 @@ const cardsData = [
   </div>
 </section>
 
-<div class="relative mx-auto pt-[6vh] pb-8 z-10" style="max-width: 80rem;">
+<div
+  class="relative mx-auto pt-[clamp(3vh,6vw,6vh)] pb-[clamp(2rem,4vw,2rem)] z-10 container-fluid"
+>
 </div>

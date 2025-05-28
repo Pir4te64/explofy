@@ -63,7 +63,7 @@
     "ctaCard": true
   },
   "contact": { "backgroundImage": "/contact/hero.png", "card": false },
-  "sistema-de-recuperacion-testigos": {
+  "sistema-de-recuperacion-de-testigos": {
     "backgroundImage": "/stock/producto.png",
     "card": false,
     "title": "Sistema de Recuperación de Testigos",

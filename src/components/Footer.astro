@@ -9,59 +9,104 @@ const currentYear = new Date().getFullYear();
 
 <section>
   <img src="/over-footer.svg" class="w-full" />
-  <div class="grid grid-cols-4 gap-4 bg-[#D0DBE0] px-4 py-10">
-    <div class="col-span-2 flex flex-row items-start gap-4">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[clamp(1rem,3vw,2rem)] bg-[#D0DBE0] px-[clamp(1rem,3vw,2rem)] py-[clamp(2.5rem,5vw,2.5rem)]"
+  >
+    <div
+      class="lg:col-span-2 flex flex-col sm:flex-row items-start gap-[clamp(1rem,2vw,2rem)]"
+    >
       <img
         src="/explofy-logo.svg"
         alt="Exploy Catalani Factory"
-        class="mr-[78px] ml-[195px]"
+        class="w-[clamp(8rem,12vw,12rem)] mr-[clamp(2rem,4vw,5rem)] ml-[clamp(1rem,10vw,12rem)]"
       />
-      <div class="flex flex-col gap-4">
-        <div class="flex flex-row items-center gap-2">
-          <img src="/phone-icon.svg" alt="Phone icon" class="h-6" />
+      <div class="flex flex-col gap-[clamp(1rem,2vw,1rem)]">
+        <div class="flex flex-row items-center gap-[clamp(0.5rem,1vw,1rem)]">
+          <img
+            src="/phone-icon.svg"
+            alt="Phone icon"
+            class="h-[clamp(1.5rem,2vw,1.5rem)]"
+          />
           <div class="flex flex-col">
-            <p class="text-[#004B64] mt-2 font-bold">¡Hola!</p>
-            <p class="text-black font-light">(+54) 0261 4960201</p>
+            <p
+              class="text-[#004B64] mt-[clamp(0.5rem,1vw,0.5rem)] font-bold text-[clamp(0.875rem,1.5vw,1rem)]"
+            >
+              ¡Hola!
+            </p>
+            <p class="text-black font-light text-[clamp(0.875rem,1.5vw,1rem)]">
+              (+54) 0261 4960201
+            </p>
           </div>
         </div>
 
-        <div class="flex flex-col gap-1">
+        <div class="flex flex-col gap-[clamp(0.25rem,0.5vw,0.25rem)]">
           <a
             href="mailto:mario@explofy.com.ar"
-            class="font-bold underline text-[#004B64]"
+            class="font-bold underline text-[#004B64] text-[clamp(0.875rem,1.5vw,1rem)]"
           >
-            mario@explofy.com.ar
+            > mario@explofy.com.ar
           </a>
           <a
             href="mailto:romi@explofy.com.ar"
-            class="font-bold underline text-[#004B64]"
+            class="font-bold underline text-[#004B64] text-[clamp(0.875rem,1.5vw,1rem)]"
           >
             romi@explofy.com.ar
           </a>
         </div>
 
-        <p class="font-regular text-[#004B64]">
+        <p
+          class="font-regular text-[#004B64] text-[clamp(0.875rem,1.5vw,1rem)] leading-relaxed"
+        >
           Cristobal Colón 32 (altura de San Martín 6592) Carrodilla, Luján de
           Cuyo Mendoza República Argentina CPM5505FSN
         </p>
       </div>
     </div>
 
-    <div class="col-start-3 flex flex-col gap-2 mr-[115px] ml-[115px] mt-2">
-      <a href="" class="text-[#004B64] font-semibold">Menú</a>
-      <a href="" class="text-[#004B64] font-regular">Producto</a>
-      <a href="" class="text-[#004B64] font-regular">Nosotros</a>
-      <a href="" class="text-[#004B64] font-regular">Contacto</a>
-      <a href="" class="text-[#004B64] font-regular">Cotizar</a>
+    <div
+      class="flex flex-col gap-[clamp(0.5rem,1vw,0.5rem)] mr-[clamp(1rem,6vw,7rem)] ml-[clamp(1rem,6vw,7rem)] mt-[clamp(0.5rem,1vw,0.5rem)]"
+    >
+      <a
+        href=""
+        class="text-[#004B64] font-semibold text-[clamp(0.875rem,1.5vw,1rem)]"
+        >Menú</a
+      >
+      <a
+        href=""
+        class="text-[#004B64] font-regular text-[clamp(0.875rem,1.5vw,1rem)]"
+        >Producto</a
+      >
+      <a
+        href=""
+        class="text-[#004B64] font-regular text-[clamp(0.875rem,1.5vw,1rem)]"
+        >Nosotros</a
+      >
+      <a
+        href=""
+        class="text-[#004B64] font-regular text-[clamp(0.875rem,1.5vw,1rem)]"
+        >Contacto</a
+      >
+      <a
+        href=""
+        class="text-[#004B64] font-regular text-[clamp(0.875rem,1.5vw,1rem)]"
+        >Cotizar</a
+      >
     </div>
 
-    <div class="col-start-4 mt-2">
-      <h3 class="text-[#004B64] font-semibold mb-2">Redes sociales</h3>
-      <div class="flex flex-row gap-2 items-center">
+    <div class="mt-[clamp(0.5rem,1vw,0.5rem)]">
+      <h3
+        class="text-[#004B64] font-semibold mb-[clamp(0.5rem,1vw,0.5rem)] text-[clamp(0.875rem,1.5vw,1rem)]"
+      >
+        Redes sociales
+      </h3>
+      <div class="flex flex-row gap-[clamp(0.5rem,1vw,0.5rem)] items-center">
         {
           footerImages.map((image) => (
             <a href={image.url}>
-              <img src={image.path} />
+              <img
+                src={image.path}
+                class="w-[clamp(1.5rem,2.5vw,2rem)] h-[clamp(1.5rem,2.5vw,2rem)]"
+              />
             </a>
           ))
         }
@@ -69,8 +114,13 @@ const currentYear = new Date().getFullYear();
     </div>
   </div>
   <div class="bg-[#D0DBE0] flex flex-col items-center">
-    <div class="bg-[#004B64] h-[1.05px] w-3/4 my-2 opacity-50"></div>
-    <h4 class="text-center text-[#004B64] text-[17px] my-4">
+    <div
+      class="bg-[#004B64] h-[clamp(0.0625rem,0.1vw,0.0625rem)] w-3/4 my-[clamp(0.5rem,1vw,0.5rem)] opacity-50"
+    >
+    </div>
+    <h4
+      class="text-center text-[#004B64] text-[clamp(1rem,1.5vw,1.0625rem)] my-[clamp(1rem,2vw,1rem)]"
+    >
       &copy; Copyright {currentYear}. Ingenio ADN. All right reserved
     </h4>
   </div>

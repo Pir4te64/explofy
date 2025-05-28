@@ -8,12 +8,16 @@ const { icon, title } = Astro.props;
 ---
 
 <div
-  class={`bg-white hover:bg-[#EDA732] rounded-md px-10 py-12 max-w-[320px] min-h-[220px] relative transition-all duration-300 shadow-xl group flex flex-col items-center justify-center text-center`}
+  class={`bg-white hover:bg-[#EDA732] rounded-md px-[clamp(1rem,3vw,2.5rem)] py-[clamp(1.5rem,4vw,3rem)] w-full max-w-[clamp(17.5rem,40vw,20rem)] min-h-[clamp(11.25rem,27.5vw,13.75rem)] relative transition-all duration-300 shadow-xl group flex flex-col items-center justify-center text-center mx-auto`}
 >
   <img
     src={icon}
     alt={title}
-    class="w-12 h-12 mb-4 transition-all duration-300 group-hover:brightness-0 group-hover:invert"
+    class="w-[clamp(2rem,4vw,3rem)] h-[clamp(2rem,4vw,3rem)] mb-[clamp(0.75rem,2vw,1rem)] transition-all duration-300 group-hover:brightness-0 group-hover:invert"
   />
-  <h3 class="text-lg font-semibold mb-1 group-hover:text-white">{title}</h3>
+  <h3
+    class="text-[clamp(1rem,2vw,1.125rem)] font-semibold mb-[clamp(0.25rem,0.5vw,0.25rem)] group-hover:text-white"
+  >
+    {title}
+  </h3>
 </div>

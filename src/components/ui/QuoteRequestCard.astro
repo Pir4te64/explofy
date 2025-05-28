@@ -12,17 +12,25 @@ const {
 } = Astro.props;
 ---
 
-<div class="mb-8 h-full bg-[#D0DBE0] max-w-[320px]">
-  <div class="p-8 flex flex-col items-center justify-center text-center h-full">
-    <h3 class="font-bold text-2xl mb-4 text-center text-[#23263B]">
+<div
+  class="mb-[clamp(2rem,4vw,2rem)] h-full bg-[#D0DBE0] max-w-[clamp(20rem,40vw,20rem)]"
+>
+  <div
+    class="p-[clamp(2rem,4vw,2rem)] flex flex-col items-center justify-center text-center h-full"
+  >
+    <h3
+      class="font-bold text-[clamp(1.5rem,2.5vw,1.5rem)] mb-[clamp(1rem,2vw,1rem)] text-center text-[#23263B]"
+    >
       Solicita tu cotización personalizada
     </h3>
-    <p class="text-base font-[400] mb-8 text-center text-[#23263B]">
+    <p
+      class="text-[clamp(1rem,2vw,1rem)] font-[400] mb-[clamp(2rem,4vw,2rem)] text-center text-[#23263B]"
+    >
       {description}
     </p>
     <a
       href="#"
-      class="bg-amber-400 hover:bg-amber-500 text-black py-3 px-4 text-base transition-colors duration-300 rounded-lg w-full font-semibold text-center"
+      class="bg-amber-400 hover:bg-amber-500 text-black py-[clamp(0.75rem,1.5vw,0.75rem)] px-[clamp(1rem,2vw,1rem)] text-[clamp(1rem,2vw,1rem)] transition-colors duration-300 rounded-lg w-full font-semibold text-center"
     >
       {buttonText}
     </a>

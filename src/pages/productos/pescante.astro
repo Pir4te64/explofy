@@ -21,43 +21,56 @@ const gridData = componentsData.Pescante.internalCards;
     showBreadCrumbs={true}
     parentComponent="sistema-de-recuperacion-testigos"
   />
-  <section class="py-24">
-    <div class="w-[95rem] mx-auto">
-      <div class="w-full text-left mb-16">
-        <h2 class="text-3xl font-bold mb-6 text-center">
+  <section class="py-[clamp(4rem,8vw,6rem)]">
+    <div class="container-fluid">
+      <div class="w-full text-left mb-[clamp(4rem,8vw,4rem)]">
+        <h2
+          class="text-[clamp(1.5rem,3vw,1.875rem)] font-bold mb-[clamp(1.5rem,3vw,1.5rem)] text-center"
+        >
           {productsData.title}
         </h2>
-        <p class="leading-relaxed font-[300]">
+        <p
+          class="leading-relaxed font-[300] text-[clamp(0.875rem,1.5vw,1rem)] text-center"
+        >
           {productsData.subtitle}
         </p>
       </div>
 
       {
         gridData.map((card) => (
-          <div class="flex flex-col md:flex-row gap-8 mt-16 items-start">
+          <div class="flex flex-col lg:flex-row gap-[clamp(2rem,4vw,2rem)] mt-[clamp(4rem,8vw,4rem)] items-start">
             {/* Left Side Container - taking same height as image */}
-            <div class="md:w-1/2 flex flex-col h-[43rem] justify-between">
+            <div class="lg:w-1/2 flex flex-col lg:h-[clamp(26.875rem,53.75vw,26.875rem)] justify-between">
               {/* Text section - top half */}
-              <div class="mb-6 h-[20rem] overflow-auto">
-                <h3 class="text-2xl font-semibold mb-4">{card.title}</h3>
-                <p class="leading-10 font-light text-black">{card.paragraph}</p>
+              <div class="mb-[clamp(1.5rem,3vw,1.5rem)] lg:h-[clamp(12.5rem,25vw,12.5rem)] overflow-auto">
+                <h3 class="text-[clamp(1.5rem,2.5vw,1.5rem)] font-semibold mb-[clamp(1rem,2vw,1rem)]">
+                  {card.title}
+                </h3>
+                <p class="leading-[clamp(1.5,2,2.5)] font-light text-black text-[clamp(1rem,1.5vw,1.125rem)]">
+                  {card.paragraph}
+                </p>
               </div>
 
               {/* Card section - bottom half */}
-              <div class="bg-white rounded-lg shadow-md p-8 flex border border-gray-100 flex-col justify-center items-center flex-grow mt-2 max-w-2xl w-full">
-                <div class="mb-4">
-                  <img src={card.cardIcon} alt="Icon" class="w-14 h-14" />
+              <div class="bg-white rounded-lg shadow-md p-[clamp(2rem,4vw,2rem)] flex border border-gray-100 flex-col justify-center items-center flex-grow mt-[clamp(0.5rem,1vw,0.5rem)] max-w-[clamp(32rem,64vw,32rem)] w-full">
+                <div class="mb-[clamp(1rem,2vw,1rem)]">
+                  <img
+                    src={card.cardIcon}
+                    alt="Icon"
+                    class="w-[clamp(3.5rem,7vw,3.5rem)] h-[clamp(3.5rem,7vw,3.5rem)]"
+                  />
                 </div>
                 <div class="items-center text-center w-full">
-                  <h4 class="text-xl font-medium text-[#EDA732] mb-3">
+                  <h4 class="text-[clamp(1.25rem,2.5vw,1.25rem)] font-medium text-[#EDA732] mb-[clamp(0.75rem,1.5vw,0.75rem)]">
                     {card.text}
                   </h4>
-                  <p class="text-[#414141] font-light mb-2">
+                  <p class="text-[#414141] font-light mb-[clamp(0.5rem,1vw,0.5rem)] text-[clamp(1rem,1.5vw,1rem)]">
                     Creamos modelos según las necesidades del cliente.
                   </p>
                   {card.subDescription && (
-                    <p class="text-[#414141] font-semibold">
-                      <span class="font-bold">Medidas:</span> {card.subDescription}
+                    <p class="text-[#414141] font-semibold text-[clamp(1rem,1.5vw,1rem)]">
+                      <span class="font-bold">Medidas:</span>{' '}
+                      {card.subDescription}
                     </p>
                   )}
                 </div>
@@ -65,27 +78,40 @@ const gridData = componentsData.Pescante.internalCards;
             </div>
 
             {/* Image on the right */}
-            <div class="md:w-1/2">
-              <img src={card.image} alt={card.title} class="w-full h-[43rem]" />
+            <div class="lg:w-1/2">
+              <img
+                src={card.image}
+                alt={card.title}
+                class="w-full lg:h-[clamp(26.875rem,53.75vw,26.875rem)] object-cover"
+              />
             </div>
           </div>
         ))
       }
     </div>
   </section>
-  <section class="py-8 flex flex-col justify-center items-center bg-[#D0DBE0]">
-    <h2 class="text-[#000929] font-bold text-[36px] text-center my-4 mb-[38px]">
+  <section
+    class="py-[clamp(2rem,4vw,2rem)] flex flex-col justify-center items-center bg-[#D0DBE0]"
+  >
+    <h2
+      class="text-[#000929] font-bold text-[clamp(1.5rem,3.6vw,2.25rem)] text-center my-[clamp(1rem,2vw,1rem)] mb-[clamp(2.375rem,4.75vw,2.375rem)]"
+    >
       Solicita tu Cotización en Simples Pasos
     </h2>
-    <h3 class="font-light text-center text-[20px]">
+    <h3
+      class="font-light text-center text-[clamp(1rem,2vw,1.25rem)] max-w-[clamp(30rem,60vw,50rem)]"
+    >
       Obtén la mejor solución para tu proyecto de manera rápida y sencilla.
       Sigue estos tres pasos y recibe una cotización personalizada en poco
       tiempo.
     </h3>
-    <img src="/flow-card.svg" class="mt-[80px] mb-[80px]" />
+    <img
+      src="/flow-card.svg"
+      class="mt-[clamp(5rem,10vw,5rem)] mb-[clamp(5rem,10vw,5rem)] w-[clamp(20rem,50vw,40rem)] h-auto"
+    />
     <a href="mailto:mario@explofy.com.ar">
       <button
-        class="bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 rounded-lg text-[#000929] min-w-[230px] min-h-[45px] text-[18px]"
+        class="bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 rounded-lg text-[#000929] min-w-[clamp(14.375rem,28.75vw,14.375rem)] min-h-[clamp(2.8125rem,5.625vw,2.8125rem)] text-[clamp(1.125rem,2.25vw,1.125rem)]"
       >
         Contactar
       </button>

@@ -1,53 +1,59 @@
 ---
 const productData = [
   {
-    img: "/product-1.svg",
-    title: "Expertise",
+    img: '/product-1.svg',
+    title: 'Expertise',
     paragraph:
-      "Hace 25 años que comenzamos este sueño de emprender, consolidarnos y trascender junto a la industria minera.\nSomos el resultado del esfuerzo, la formación y el entrenamiento de un gran equipo.",
+      'Hace 25 años que comenzamos este sueño de emprender, consolidarnos y trascender junto a la industria minera.\nSomos el resultado del esfuerzo, la formación y el entrenamiento de un gran equipo.',
   },
   {
-    img: "/product-2.svg",
-    title: "Tecnología",
+    img: '/product-2.svg',
+    title: 'Tecnología',
     paragraph:
-      "Contamos con tecnologías y equipamientos que nos permiten fabricar piezas y repuestos con un alto grado de precisión.\n Año tras año, nos renovamos, e incorporamos las últimas IT para estar a la vanguardia de la industria.",
+      'Contamos con tecnologías y equipamientos que nos permiten fabricar piezas y repuestos con un alto grado de precisión.\n Año tras año, nos renovamos, e incorporamos las últimas IT para estar a la vanguardia de la industria.',
   },
   {
-    img: "/product-3.svg",
-    title: "Customización",
+    img: '/product-3.svg',
+    title: 'Customización',
     paragraph:
-      "Estamos dispuestos a entregar las soluciones que tu empresa necesita. Diseñemos juntos la mejor solución en tiempo real. Además, contamos un stock permanente de repuestos para dar respuesta inmediata a tus requerimientos.",
+      'Estamos dispuestos a entregar las soluciones que tu empresa necesita. Diseñemos juntos la mejor solución en tiempo real. Además, contamos un stock permanente de repuestos para dar respuesta inmediata a tus requerimientos.',
   },
 ];
 ---
 
-<section class="bg-[#F3F5F8] py-30">
-  <div class="max-w-[95rem] mx-auto">
-    <div class="text-center mb-16">
-      <h2 class="text-[#000929] text-4xl font-bold mb-6">
+<section class="bg-[#F3F5F8] py-[clamp(7.5rem,15vw,7.5rem)]">
+  <div class="container-fluid">
+    <div class="text-center mb-[clamp(4rem,8vw,4rem)]">
+      <h2
+        class="text-[#000929] text-[clamp(2rem,4vw,2.5rem)] font-bold mb-[clamp(1.5rem,3vw,1.5rem)]"
+      >
         El futuro es nuestro
       </h2>
 
-      <div class="relative h-[4px] w-[400px] bg-[#D9D9D9] mx-auto">
-        <div class="absolute top-0 left-[120px] h-full w-[120px] bg-yellow-500">
+      <div
+        class="relative h-[clamp(0.25rem,0.5vw,0.25rem)] w-[clamp(20rem,25vw,25rem)] bg-[#D9D9D9] mx-auto"
+      >
+        <div class="absolute top-0 left-[30%] h-full w-[30%] bg-yellow-500">
         </div>
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-[clamp(2rem,10vw,5rem)]">
       {
         productData.map((products) => (
-          <div class="bg-white hover:bg-[#e8f0f3] w-full mx-3 rounded-lg overflow-hidden shadow-md">
-            <div class="h-60 overflow-hidden">
+          <div class="bg-white hover:bg-[#e8f0f3] w-full mx-[clamp(0.75rem,1.5vw,0.75rem)] rounded-lg overflow-hidden shadow-md">
+            <div class="h-[clamp(12rem,30vw,15rem)] overflow-hidden">
               <img
                 src={products.img}
                 alt={products.title}
-                class="w-full object-cover"
+                class="w-full h-full object-cover"
               />
             </div>
-            <div class="p-8">
-              <h3 class="text-2xl font-semibold mb-3">{products.title}</h3>
-              <p class="text-gray-700 mb-4 font-light text-xl leading-9">
+            <div class="p-[clamp(2rem,4vw,2rem)]">
+              <h3 class="text-[clamp(1.5rem,3vw,2rem)] font-semibold mb-[clamp(0.75rem,1.5vw,0.75rem)]">
+                {products.title}
+              </h3>
+              <p class="text-gray-700 mb-[clamp(1rem,2vw,1rem)] font-light text-[clamp(1rem,1.5vw,1.25rem)] leading-[clamp(1.5,1.8,2.25)]">
                 {products.paragraph}
               </p>
             </div>

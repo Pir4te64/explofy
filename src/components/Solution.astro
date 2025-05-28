@@ -1,22 +1,35 @@
 <section class="w-full min-h-screen relative">
   <!-- Orange background (top 45vh) -->
-  <div class="absolute top-0 left-0 w-full h-[45vh] bg-[#EDA732] z-0"></div>
+  <div
+    class="absolute top-0 left-0 w-full h-[clamp(35vh,45vw,45vh)] bg-[#EDA732] z-0"
+  >
+  </div>
 
   <!-- Cards container -->
-  <div class="relative max-w-[75%] mx-auto pt-[6vh] pb-8 z-10">
-    <h2 class="text-3xl md:text-4xl font-bold text-[#181818] mb-2 text-left">
+  <div
+    class="relative container-fluid pt-[clamp(3vh,6vw,6vh)] pb-[clamp(2rem,4vw,2rem)] z-10"
+  >
+    <h2
+      class="text-[clamp(1.5rem,4vw,2.5rem)] font-bold text-[#181818] mb-[clamp(0.5rem,1vw,0.5rem)] text-left"
+    >
       Soluciones de ingeniería para la minería
     </h2>
-    <p class="text-[#181818] text-base md:text-lg font-light mb-10 text-justify">
+    <p
+      class="text-[#181818] text-[clamp(1rem,1.5vw,1.125rem)] font-light mb-[clamp(2.5rem,5vw,2.5rem)] text-justify"
+    >
       Innovamos con tecnologías de última generación para mejorar el rendimiento
       de tus equipos.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mt-32">
+    <div
+      class="grid grid-cols-1 md:grid-cols-3 gap-[clamp(2.5rem,5vw,2.5rem)] mt-[clamp(6rem,16vw,8rem)]"
+    >
       <!-- Card 1 -->
       <div class="flex flex-col items-start">
         <div class="w-full flex justify-center">
-          <div class="rounded-xl overflow-hidden relative -mt-[8vh] z-20">
+          <div
+            class="rounded-xl overflow-hidden relative -mt-[clamp(4vh,8vw,8vh)] z-20"
+          >
             <img
               src="/solution/solutionCard-1.svg"
               alt="Ingeniería 1"
@@ -24,9 +37,11 @@
             />
           </div>
         </div>
-        <div class="bg-white rounded-b-xl px-4 py-4 -mt-4 w-full text-justify">
+        <div
+          class="bg-white rounded-b-xl px-[clamp(1rem,2vw,1rem)] py-[clamp(1rem,2vw,1rem)] -mt-[clamp(1rem,2vw,1rem)] w-full text-justify"
+        >
           <p
-            class="text-[#181818] text-base text-[20px] font-light leading-relaxed text-justify"
+            class="text-[#181818] text-[clamp(1rem,1.5vw,1.25rem)] font-light leading-relaxed text-justify"
           >
             Fabricamos y suministramos una amplia gama de repuestos y
             componentes de precisión diseñados para maximizar la eficiencia y
@@ -42,7 +57,9 @@
       <!-- Card 2 -->
       <div class="flex flex-col items-start">
         <div class="w-full flex justify-center">
-          <div class="rounded-xl overflow-hidden relative -mt-[8vh] z-20">
+          <div
+            class="rounded-xl overflow-hidden relative -mt-[clamp(4vh,8vw,8vh)] z-20"
+          >
             <img
               src="/solution/solutionCard-2.svg"
               alt="Ingeniería 2"
@@ -50,8 +67,12 @@
             />
           </div>
         </div>
-        <div class="bg-white rounded-b-xl px-4 py-4 -mt-4 w-full text-justify">
-          <p class="text-[#181818] text-[20px] font-light leading-relaxed text-justify">
+        <div
+          class="bg-white rounded-b-xl px-[clamp(1rem,2vw,1rem)] py-[clamp(1rem,2vw,1rem)] -mt-[clamp(1rem,2vw,1rem)] w-full text-justify"
+        >
+          <p
+            class="text-[#181818] text-[clamp(1rem,1.5vw,1.25rem)] font-light leading-relaxed text-justify"
+          >
             Para mejorar la seguridad y confiabilidad en los procesos de
             perforación, ofrecemos accesorios diamantina, como adaptadores,
             campanas de rescate, elevadores de varillas y kits de pozo seco,
@@ -67,7 +88,9 @@
       <!-- Card 3 -->
       <div class="flex flex-col items-start">
         <div class="w-full flex justify-center">
-          <div class="rounded-xl overflow-hidden relative -mt-[8vh] z-20">
+          <div
+            class="rounded-xl overflow-hidden relative -mt-[clamp(4vh,8vw,8vh)] z-20"
+          >
             <img
               src="/solution/solutionCard-3.svg"
               alt="Ingeniería 3"
@@ -75,8 +98,12 @@
             />
           </div>
         </div>
-        <div class="bg-white rounded-b-xl px-4 py-4 -mt-4 w-full text-justify">
-          <p class="text-[#181818] text-[20px] font-light leading-relaxed text-justify">
+        <div
+          class="bg-white rounded-b-xl px-[clamp(1rem,2vw,1rem)] py-[clamp(1rem,2vw,1rem)] -mt-[clamp(1rem,2vw,1rem)] w-full"
+        >
+          <p
+            class="text-[#181818] text-[clamp(1rem,1.5vw,1.25rem)] font-light leading-relaxed text-justify"
+          >
             Nuestra capacidad de fabricación metalúrgica nos permite ofrecer
             componentes robustos para maquinaria de perforación, como prensas
             inferiores, chucks y ejes de cabezales; además de equipamiento
@@ -92,13 +119,19 @@
 </section>
 
 <!-- El compromiso de Explofy section -->
-<section class="relative w-full pt-40 pb-32 -mt-6 z-20 overflow-visible">
-  <div class="relative max-w-[75%] mx-auto bg-white mt-2.5">
-    <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-12">
+<section
+  class="relative w-full pt-[clamp(10rem,20vw,10rem)] pb-[clamp(8rem,16vw,8rem)] -mt-[clamp(1.5rem,3vw,1.5rem)] z-20 overflow-visible"
+>
+  <div
+    class="relative container-fluid bg-white mt-[clamp(0.625rem,1.25vw,0.625rem)]"
+  >
+    <h2
+      class="text-[clamp(1.875rem,4vw,2.5rem)] font-extrabold text-center mb-[clamp(3rem,6vw,3rem)]"
+    >
       El compromiso de Explofy
     </h2>
     <p
-      class="text-center text-[20px] md:text-xl font-light mb-30 px-4 text-justify"
+      class="text-center text-[clamp(1rem,1.5vw,1.25rem)] font-light mb-[clamp(7.5rem,15vw,7.5rem)] px-[clamp(1rem,2vw,1rem)] text-justify"
     >
       En Explofy, impulsamos el rendimiento y la eficiencia de la industria
       minera con soluciones de alta precisión. Nuestra prioridad es ofrecer
@@ -107,23 +140,29 @@
       producto.
     </p>
   </div>
-  <div class="flex justify-center bg-[#00546B] w-full h-[30rem]">
+  <div
+    class="flex justify-center bg-[#00546B] w-full h-[clamp(25rem,30vw,30rem)]"
+  >
     <div
-      class="relative grid grid-cols-1 md:grid-cols-3 gap-8 z-10 w-full max-w-[95rem] mx-auto -mt-24"
+      class="relative grid grid-cols-1 md:grid-cols-3 gap-[clamp(2rem,4vw,2rem)] z-10 w-full container-fluid -mt-[clamp(6rem,12vw,6rem)]"
     >
       <!-- Card 1 -->
       <div
-        class="bg-white rounded-2xl shadow-2xl shadow-black p-12 flex flex-col items-center text-center transition-transform hover:-translate-y-2 hover:shadow-3xl h-[20rem] w-full max-w-[28rem] mt-12"
+        class="bg-white rounded-2xl shadow-2xl shadow-black p-[clamp(2rem,6vw,3rem)] flex flex-col items-center text-center transition-transform hover:-translate-y-2 hover:shadow-3xl h-[clamp(18rem,25vw,20rem)] w-full max-w-[clamp(24rem,35vw,28rem)] mt-[clamp(3rem,6vw,3rem)]"
       >
         <img
           src="/solution/card-1.svg"
           alt="Calidad y precisión"
-          class="mb-6"
+          class="mb-[clamp(1.5rem,3vw,1.5rem)] w-[clamp(3rem,6vw,4rem)] h-[clamp(3rem,6vw,4rem)]"
         />
-        <h3 class="text-2xl font-extrabold text-[22px] text-[#00546B] mb-3">
+        <h3
+          class="text-[clamp(1.375rem,2.5vw,1.375rem)] font-extrabold text-[#00546B] mb-[clamp(0.75rem,1.5vw,0.75rem)]"
+        >
           Calidad y precisión
         </h3>
-        <p class="text-[#181818] text-[18px] font-light leading-relaxed text-justify">
+        <p
+          class="text-[#181818] text-[clamp(1rem,1.5vw,1.125rem)] font-light leading-relaxed text-justify"
+        >
           Diseñamos y fabricamos repuestos y herramientas con tecnología de
           última generación
         </p>
@@ -131,17 +170,21 @@
 
       <!-- Card 2 -->
       <div
-        class="bg-white rounded-2xl shadow-2xl shadow-black p-12 flex flex-col items-center text-center transition-transform hover:-translate-y-2 hover:shadow-3xl h-[20rem] w-full max-w-[28rem] mt-12"
+        class="bg-white rounded-2xl shadow-2xl shadow-black p-[clamp(2rem,6vw,3rem)] flex flex-col items-center text-center transition-transform hover:-translate-y-2 hover:shadow-3xl h-[clamp(18rem,25vw,20rem)] w-full max-w-[clamp(24rem,35vw,28rem)] mt-[clamp(3rem,6vw,3rem)]"
       >
         <img
           src="/solution/card-2.svg"
           alt="Trabajo colaborativo"
-          class="mb-6"
+          class="mb-[clamp(1.5rem,3vw,1.5rem)] w-[clamp(3rem,6vw,4rem)] h-[clamp(3rem,6vw,4rem)]"
         />
-        <h3 class="text-2xl font-extrabold text-[22px] text-[#00546B] mb-3">
+        <h3
+          class="text-[clamp(1.375rem,2.5vw,1.375rem)] font-extrabold text-[#00546B] mb-[clamp(0.75rem,1.5vw,0.75rem)]"
+        >
           Trabajo colaborativo
         </h3>
-        <p class="text-[#181818] text-[18px] font-light leading-relaxed text-justify">
+        <p
+          class="text-[#181818] text-[clamp(1rem,1.5vw,1.125rem)] font-light leading-relaxed text-justify"
+        >
           Creemos en la fuerza de la unidad, desarrollando soluciones
           personalizadas que se ajustan a cada cliente.
         </p>
@@ -149,17 +192,21 @@
 
       <!-- Card 3 -->
       <div
-        class="bg-white rounded-2xl shadow-2xl shadow-black p-12 flex flex-col items-center text-center transition-transform hover:-translate-y-2 hover:shadow-3xl h-[20rem] w-full max-w-[28rem] mt-12"
+        class="bg-white rounded-2xl shadow-2xl shadow-black p-[clamp(2rem,6vw,3rem)] flex flex-col items-center text-center transition-transform hover:-translate-y-2 hover:shadow-3xl h-[clamp(18rem,25vw,20rem)] w-full max-w-[clamp(24rem,35vw,28rem)] mt-[clamp(3rem,6vw,3rem)]"
       >
         <img
           src="/solution/card-3.svg"
           alt="Innovación constante"
-          class="mb-6"
+          class="mb-[clamp(1.5rem,3vw,1.5rem)] w-[clamp(3rem,6vw,4rem)] h-[clamp(3rem,6vw,4rem)]"
         />
-        <h3 class="text-2xl font-extrabold text-[22px] text-[#00546B] mb-3">
+        <h3
+          class="text-[clamp(1.375rem,2.5vw,1.375rem)] font-extrabold text-[#00546B] mb-[clamp(0.75rem,1.5vw,0.75rem)]"
+        >
           Innovación constante
         </h3>
-        <p class="text-[#181818] text-[20px] font-light leading-relaxed text-justify">
+        <p
+          class="text-[#181818] text-[clamp(1rem,1.5vw,1.125rem)] font-light leading-relaxed text-justify"
+        >
           Incorporamos nuevas tecnologías año tras año para mantener
         </p>
       </div>

@@ -29,10 +29,10 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 w-[95rem] bg-[#004B64] h-[5.4rem] flex flex-row justify-between">
-      <div className="flex items-center justify-between max-w-[1200px] h-full px-[3rem]">
+    <nav className="sticky top-0 w-full container-fluid bg-[#004B64] h-[clamp(3.5rem,4.5rem,5.4rem)] flex flex-row justify-between">
+      <div className="flex items-center justify-between w-full h-full px-[clamp(1rem,2vw,3rem)]">
         {/* Left side: Dropdown and links */}
-        <div className="flex items-center gap-20 text-white text-[1.2rem]">
+        <div className="flex items-center gap-[clamp(1rem,3vw,5rem)] text-white text-[clamp(0.875rem,1.5vw,1.2rem)]">
           <div
             ref={dropdownRef}
             className="relative"
@@ -46,10 +46,10 @@ export function Navbar() {
                   onClick={handleProductosClick}
                 >
                   {navLink.title}
-                  <ChevronDown className="size-3" />
+                  <ChevronDown className="size-[clamp(0.75rem,1vw,1rem)]" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[13rem] mt-[1rem]">
+              <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[clamp(1rem,5vw,13rem)] mt-[1rem]">
                 {renderDropdownItems(
                   navLink.dropdownItems,
                   selectedIndex,
@@ -58,10 +58,16 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <a href="#" className="hover:underline hover:text-[#f5a623]">
+          <a
+            href="#"
+            className="hover:underline hover:text-[#f5a623] hidden md:block"
+          >
             Nosotros
           </a>
-          <a href="/contacto" className="hover:underline hover:text-[#f5a623]">
+          <a
+            href="/contacto"
+            className="hover:underline hover:text-[#f5a623] hidden md:block"
+          >
             Contacto
           </a>
         </div>
@@ -69,10 +75,11 @@ export function Navbar() {
       {/* Right side: Cotizar button */}
       <a
         href="#"
-        className="bg-[#f5a623] text-white font-bold text-center flex items-center text-[1.1rem] justify-center w-[20rem] h-full hover:bg-[#e59820]"
+        className="bg-[#f5a623] text-white font-bold text-center flex items-center text-[clamp(0.875rem,1.2vw,1.1rem)] justify-center w-[clamp(4rem,15vw,20rem)] h-full hover:bg-[#e59820]"
         style={{ clipPath: 'polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%)' }}
       >
-        Cotizar
+        <span className="hidden md:inline">Cotizar</span>
+        <span className="md:hidden">$</span>
       </a>
     </nav>
   );

@@ -2,6 +2,95 @@
 @import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
+
+/* Viewport-based scaling system */
+:root {
+  /* Base design dimensions (1920x1080) */
+  --base-width: 1920;
+  --base-height: 1080;
+  --base-font-size: 16;
+
+  /* Dynamic viewport calculations */
+  --viewport-width: 100vw;
+  --viewport-height: 100vh;
+
+  /* Responsive scale factors */
+  --scale-x: calc(100vw / var(--base-width));
+  --scale-y: calc(100vh / var(--base-height));
+  --scale-min: min(var(--scale-x), var(--scale-y));
+  --scale-fluid: clamp(0.75, var(--scale-min), 2);
+
+  /* Font scaling */
+  --font-scale: clamp(0.875, var(--scale-min), 1.25);
+}
+
+/* Apply scaling to html for rem-based sizing */
+html {
+  font-size: calc(var(--base-font-size) * var(--font-scale) * 1px);
+}
+
+/* Responsive containers */
+.container-fluid {
+  width: 100%;
+  max-width: min(95rem, calc(100vw - 2rem));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 2vw, 2rem);
+  padding-right: clamp(1rem, 2vw, 2rem);
+}
+
+/* Component scaling utilities */
+.scale-responsive {
+  transform: scale(var(--scale-fluid));
+  transform-origin: center;
+}
+
+.scale-responsive-x {
+  transform: scaleX(var(--scale-x));
+  transform-origin: center;
+}
+
+.scale-responsive-y {
+  transform: scaleY(var(--scale-y));
+  transform-origin: center;
+}
+
+/* Breakpoint-specific adjustments */
+@media (max-width: 768px) {
+  :root {
+    --scale-fluid: clamp(0.8, calc(100vw / 768), 1);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1366px) {
+  :root {
+    --scale-fluid: clamp(0.9, calc(100vw / 1366), 1.1);
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 1919px) {
+  :root {
+    --scale-fluid: clamp(0.95, calc(100vw / 1920), 1);
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --scale-fluid: 1;
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --scale-fluid: clamp(1, calc(100vw / 2560), 1.33);
+  }
+}
+
+@media (min-width: 3840px) {
+  :root {
+    --scale-fluid: clamp(1.33, calc(100vw / 3840), 2);
+  }
+}
 @font-face {
   font-family: 'Averta';
   src: url('/fonts/averta/AvertaStd-Regular.ttf') format('truetype');
@@ -105,6 +194,24 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Base design dimensions (1920x1080) */
+  --base-width: 1920;
+  --base-height: 1080;
+  --base-font-size: 16;
+
+  /* Dynamic viewport calculations */
+  --viewport-width: 100vw;
+  --viewport-height: 100vh;
+
+  /* Responsive scale factors */
+  --scale-x: calc(100vw / var(--base-width));
+  --scale-y: calc(100vh / var(--base-height));
+  --scale-min: min(var(--scale-x), var(--scale-y));
+  --scale-fluid: clamp(0.75, var(--scale-min), 2);
+
+  /* Font scaling */
+  --font-scale: clamp(0.875, var(--scale-min), 1.25);
 }
 
 .dark {
@@ -139,4 +246,78 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+/* Apply scaling to html for rem-based sizing */
+html {
+  font-size: calc(var(--base-font-size) * var(--font-scale) * 1px);
+}
+
+/* Responsive containers */
+.container-fluid {
+  width: 100%;
+  max-width: min(95rem, calc(100vw - 2rem));
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1rem, 2vw, 2rem);
+  padding-right: clamp(1rem, 2vw, 2rem);
+}
+
+/* Component scaling utilities */
+.scale-responsive {
+  transform: scale(var(--scale-fluid));
+  transform-origin: center;
+}
+
+.scale-responsive-x {
+  transform: scaleX(var(--scale-x));
+  transform-origin: center;
+}
+
+.scale-responsive-y {
+  transform: scaleY(var(--scale-y));
+  transform-origin: center;
+}
+
+/* Breakpoint-specific adjustments for different resolutions */
+@media (max-width: 768px) {
+  :root {
+    --scale-fluid: clamp(0.8, calc(100vw / 768), 1);
+    --font-scale: clamp(0.8, calc(100vw / 768), 0.95);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1366px) {
+  :root {
+    --scale-fluid: clamp(0.85, calc(100vw / 1366), 1.05);
+    --font-scale: clamp(0.85, calc(100vw / 1366), 1);
+  }
+}
+
+@media (min-width: 1367px) and (max-width: 1919px) {
+  :root {
+    --scale-fluid: clamp(0.9, calc(100vw / 1920), 1);
+    --font-scale: clamp(0.9, calc(100vw / 1920), 1);
+  }
+}
+
+@media (min-width: 1920px) {
+  :root {
+    --scale-fluid: 1;
+    --font-scale: 1;
+  }
+}
+
+@media (min-width: 2560px) {
+  :root {
+    --scale-fluid: clamp(1, calc(100vw / 2560), 1.33);
+    --font-scale: clamp(1, calc(100vw / 2560), 1.2);
+  }
+}
+
+@media (min-width: 3840px) {
+  :root {
+    --scale-fluid: clamp(1.33, calc(100vw / 3840), 2);
+    --font-scale: clamp(1.2, calc(100vw / 3840), 1.5);
+  }
 }
