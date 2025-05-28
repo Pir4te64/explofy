@@ -29,8 +29,8 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 w-full container-fluid bg-[#004B64] h-[clamp(3.5rem,4.5rem,5.4rem)] flex flex-row justify-between">
-      <div className="flex items-center justify-between w-full h-full px-[clamp(1rem,2vw,3rem)]">
+    <nav className="sticky top-0 w-[95rem] container bg-[#004B64] h-[clamp(3.5rem,4.5rem,5.4rem)] flex flex-row justify-between">
+      <div className="flex items-center justify-between max-w-[1200px] w-full h-full px-[clamp(1rem,2vw,3rem)]">
         {/* Left side: Dropdown and links */}
         <div className="flex items-center gap-[clamp(1rem,3vw,5rem)] text-white text-[clamp(0.875rem,1.5vw,1.2rem)]">
           <div
