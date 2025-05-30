@@ -67,7 +67,7 @@ const generateBreadcrumbs = () => {
 const breadcrumbs = generateBreadcrumbs();
 ---
 
-<section class="relative w-full h-[clamp(50vh,80vw,80vh)]">
+<section class="relative w-full h-[clamp(60vh,100vw,80vh)]">
   <div class="absolute inset-0 z-0">
     <div
       class="w-full h-full bg-cover bg-center"
@@ -77,21 +77,21 @@ const breadcrumbs = generateBreadcrumbs();
   </div>
   {
     heroData.showCard && (
-      <div class="absolute left-[clamp(2rem,11vw,11rem)] bottom-[clamp(2rem,5vw,5rem)] bg-black/10 flex items-center justify-center z-10">
-        <div class="bg-[#004B6480]/80 h-[clamp(15rem,19vw,19rem)] w-[clamp(30rem,45vw,45rem)] rounded-md">
+      <div class="flex absolute left-4 md:left-[clamp(2rem,11vw,11rem)] bottom-4 md:bottom-[clamp(2rem,5vw,5rem)] bg-black/10 md:items-center justify-center z-10 w-[calc(100%-2rem)] md:w-auto">
+        <div class="bg-[#004B6480]/80 min-h-[12rem] md:h-[clamp(15rem,19vw,19rem)] w-full max-w-[25rem] md:max-w-[50rem] md:w-[clamp(30rem,45vw,45rem)] rounded-md p-4 md:p-0">
           {/* Breadcrumbs navigation */}
           {heroData.showBreadCrumbs && (
-            <div class="flex items-center ml-[clamp(1rem,2vw,2rem)] mt-[clamp(1rem,2vw,2rem)] text-white">
+            <div class="flex items-center ml-0 md:ml-[clamp(1rem,2vw,2rem)] mt-2 md:mt-[clamp(1rem,2vw,2rem)] text-white">
               {breadcrumbs.map((crumb, index) => (
                 <>
                   {index > 0 && (
-                    <span class="mx-[clamp(0.5rem,1vw,0.5rem)] sm:hidden md:flex">
+                    <span class="mx-[clamp(0.5rem,1vw,0.5rem)] hidden md:flex">
                       &rarr;
                     </span>
                   )}
                   <a
                     href={crumb.url}
-                    class={`sm:hidden hover:text-[#f5a623] md:flex items-center text-[clamp(0.875rem,1.5vw,1rem)] ${index === breadcrumbs.length - 1 ? 'font-semibold' : 'font-light'}`}
+                    class={`hover:text-[#f5a623] flex items-center text-[clamp(0.75rem,1.5vw,1rem)] ${index === breadcrumbs.length - 1 ? 'font-semibold' : 'font-light'}`}
                   >
                     {index === 0 && <Home class="size-4 mr-1" />}
                     {crumb.name
@@ -105,16 +105,18 @@ const breadcrumbs = generateBreadcrumbs();
             </div>
           )}
 
-          <h1 class="text-[clamp(1.75rem,2.8vw,2.8rem)] font-bold text-white mt-[clamp(1rem,2vw,2rem)] ml-[clamp(1rem,2.1vw,2.1rem)] leading-tight">
+          <h1 class="text-center md:text-left mt-4 md:mt-[clamp(1rem,2vw,2rem)] ml-0 md:ml-[clamp(1rem,2.1vw,2.1rem)] text-[clamp(1.5rem,2.8vw,2.8rem)] font-bold text-white leading-tight">
             {heroData.title}
           </h1>
-          <p class="text-[clamp(1.25rem,2.125vw,2.125rem)] text-white mt-[clamp(0.875rem,1.375vw,1.375rem)] ml-[clamp(1rem,2vw,2rem)]">
+          <p class="text-center md:text-left text-[clamp(1rem,2.125vw,2.125rem)] text-white mt-[clamp(0.5rem,1.375vw,1.375rem)] ml-0 md:ml-[clamp(1rem,2vw,2rem)]">
             {heroData.subtitle}
           </p>
           {heroData.ctaButton && (
-            <button class="ml-[clamp(1rem,2vw,2rem)] mt-[clamp(1rem,1.5vw,1.5rem)] bg-[#f5a623] hover:bg-[#f5a623]/80 rounded-lg px-[clamp(3rem,5vw,5rem)] py-[clamp(0.75rem,1.5vw,0.75rem)] text-[clamp(1rem,1.5vw,1.125rem)] text-white">
-              Cotizar
-            </button>
+            <div class="flex justify-center md:justify-start">
+              <button class="ml-0 md:ml-[clamp(1rem,2vw,2rem)] mt-[clamp(1rem,1.5vw,1.5rem)] bg-[#f5a623] hover:bg-[#f5a623]/80 rounded-lg px-[clamp(2rem,5vw,5rem)] py-[clamp(0.75rem,1.5vw,0.75rem)] text-[clamp(0.875rem,1.5vw,1.125rem)] text-white">
+                Cotizar
+              </button>
+            </div>
           )}
         </div>
       </div>

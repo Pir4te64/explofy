@@ -10,30 +10,34 @@ const currentYear = new Date().getFullYear();
 <section>
   <img src="/over-footer.svg" class="w-full" />
   <div
-    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[clamp(1rem,3vw,2rem)] bg-[#D0DBE0] px-[clamp(1rem,3vw,2rem)] py-[clamp(2.5rem,5vw,2.5rem)]"
+    class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[clamp(1rem,3vw,2rem)] bg-[#D0DBE0] px-[clamp(1rem,3vw,2rem)] py-[clamp(2rem,5vw,2.5rem)]"
   >
     <div
-      class="lg:col-span-2 flex flex-col sm:flex-row items-start gap-[clamp(1rem,2vw,2rem)]"
+      class="lg:col-span-2 flex flex-col sm:flex-row items-center sm:items-start gap-[clamp(1rem,2vw,2rem)]"
     >
       <img
         src="/explofy-logo.svg"
         alt="Exploy Catalani Factory"
-        class="w-[clamp(8rem,12vw,12rem)] mr-[clamp(2rem,4vw,5rem)] ml-[clamp(1rem,10vw,12rem)]"
+        class="w-[clamp(6rem,12vw,12rem)] mx-auto sm:mx-0 sm:mr-[clamp(2rem,4vw,5rem)] sm:ml-[clamp(1rem,10vw,12rem)]"
       />
-      <div class="flex flex-col gap-[clamp(1rem,2vw,1rem)]">
-        <div class="flex flex-row items-center gap-[clamp(0.5rem,1vw,1rem)]">
+      <div
+        class="flex flex-col gap-[clamp(1rem,2vw,1rem)] text-center sm:text-left"
+      >
+        <div
+          class="flex flex-col sm:flex-row items-center sm:items-center gap-[clamp(0.5rem,1vw,1rem)]"
+        >
           <img
             src="/phone-icon.svg"
             alt="Phone icon"
-            class="h-[clamp(1.5rem,2vw,1.5rem)]"
+            class="h-[clamp(1.25rem,2vw,1.5rem)]"
           />
           <div class="flex flex-col">
             <p
-              class="text-[#004B64] mt-[clamp(0.5rem,1vw,0.5rem)] font-bold text-[clamp(0.875rem,1.5vw,1rem)]"
+              class="text-[#004B64] mt-[clamp(0.25rem,1vw,0.5rem)] font-bold text-[clamp(0.75rem,1.5vw,1rem)]"
             >
               ¡Hola!
             </p>
-            <p class="text-black font-light text-[clamp(0.875rem,1.5vw,1rem)]">
+            <p class="text-black font-light text-[clamp(0.75rem,1.5vw,1rem)]">
               (+54) 0261 4960201
             </p>
           </div>
@@ -42,70 +46,100 @@ const currentYear = new Date().getFullYear();
         <div class="flex flex-col gap-[clamp(0.25rem,0.5vw,0.25rem)]">
           <a
             href="mailto:mario@explofy.com.ar"
-            class="font-bold underline text-[#004B64] text-[clamp(0.875rem,1.5vw,1rem)]"
+            class="font-bold underline text-[#004B64] text-[clamp(0.75rem,1.5vw,1rem)]"
           >
-            > mario@explofy.com.ar
+            mario@explofy.com.ar
           </a>
           <a
             href="mailto:romi@explofy.com.ar"
-            class="font-bold underline text-[#004B64] text-[clamp(0.875rem,1.5vw,1rem)]"
+            class="font-bold underline text-[#004B64] text-[clamp(0.75rem,1.5vw,1rem)]"
           >
             romi@explofy.com.ar
           </a>
         </div>
 
         <p
-          class="font-regular text-[#004B64] text-[clamp(0.875rem,1.5vw,1rem)] leading-relaxed"
+          class="font-regular text-[#004B64] text-[clamp(0.75rem,1.5vw,1rem)] leading-relaxed"
         >
           Cristobal Colón 32 (altura de San Martín 6592) Carrodilla, Luján de
           Cuyo Mendoza República Argentina CPM5505FSN
         </p>
       </div>
     </div>
-
     <div
-      class="flex flex-col gap-[clamp(0.5rem,1vw,0.5rem)] mr-[clamp(1rem,6vw,7rem)] ml-[clamp(1rem,6vw,7rem)] mt-[clamp(0.5rem,1vw,0.5rem)]"
+      class="flex flex-col sm:hidden gap-[clamp(0.5rem,1vw,0.5rem)] text-center"
     >
       <a
         href=""
-        class="text-[#004B64] font-semibold text-[clamp(0.875rem,1.5vw,1rem)]"
+        class="text-[#004B64] font-semibold text-[clamp(0.75rem,1.5vw,1rem)]"
         >Menú</a
       >
       <a
         href=""
-        class="text-[#004B64] font-regular text-[clamp(0.875rem,1.5vw,1rem)]"
+        class="text-[#004B64] font-regular text-[clamp(0.75rem,1.5vw,1rem)]"
         >Producto</a
       >
       <a
         href=""
-        class="text-[#004B64] font-regular text-[clamp(0.875rem,1.5vw,1rem)]"
+        class="text-[#004B64] font-regular text-[clamp(0.75rem,1.5vw,1rem)]"
         >Nosotros</a
       >
       <a
         href=""
-        class="text-[#004B64] font-regular text-[clamp(0.875rem,1.5vw,1rem)]"
+        class="text-[#004B64] font-regular text-[clamp(0.75rem,1.5vw,1rem)]"
         >Contacto</a
       >
       <a
         href=""
-        class="text-[#004B64] font-regular text-[clamp(0.875rem,1.5vw,1rem)]"
+        class="text-[#004B64] font-regular text-[clamp(0.75rem,1.5vw,1rem)]"
+        >Cotizar</a
+      >
+    </div>
+    <div
+      class="hidden sm:flex flex-row md:flex-col gap-[clamp(0.5rem,1vw,0.5rem)] sm:mr-[clamp(1rem,6vw,7rem)] ml-[clamp(1rem,6vw,7rem)] mt-[clamp(0.5rem,1vw,0.5rem)]"
+    >
+      <a
+        href=""
+        class="text-[#004B64] font-semibold text-[clamp(0.75rem,1.5vw,1rem)]"
+        >Menú</a
+      >
+      <a
+        href=""
+        class="text-[#004B64] font-regular text-[clamp(0.75rem,1.5vw,1rem)]"
+        >Producto</a
+      >
+      <a
+        href=""
+        class="text-[#004B64] font-regular text-[clamp(0.75rem,1.5vw,1rem)]"
+        >Nosotros</a
+      >
+      <a
+        href=""
+        class="text-[#004B64] font-regular text-[clamp(0.75rem,1.5vw,1rem)]"
+        >Contacto</a
+      >
+      <a
+        href=""
+        class="text-[#004B64] font-regular text-[clamp(0.75rem,1.5vw,1rem)]"
         >Cotizar</a
       >
     </div>
 
-    <div class="mt-[clamp(0.5rem,1vw,0.5rem)]">
+    <div class="mt-[clamp(0.5rem,1vw,0.5rem)] text-center sm:text-left">
       <h3
-        class="text-[#004B64] font-semibold mb-[clamp(0.5rem,1vw,0.5rem)] text-[clamp(0.875rem,1.5vw,1rem)]"
+        class="text-[#004B64] font-semibold mb-[clamp(0.5rem,1vw,0.5rem)] text-[clamp(0.75rem,1.5vw,1rem)]"
       >
         Redes sociales
       </h3>
-      <div class="flex flex-row gap-[clamp(0.5rem,1vw,0.5rem)] items-center">
+      <div
+        class="flex flex-row gap-[clamp(0.5rem,1vw,0.5rem)] items-center justify-center sm:justify-start"
+      >
         {
           footerImages.map((image) => (
             <a href={image.url}>
               <img
                 src={image.path}
-                class="w-[clamp(1.5rem,2.5vw,2rem)] h-[clamp(1.5rem,2.5vw,2rem)]"
+                class="w-[clamp(1.25rem,2.5vw,2rem)] h-[clamp(1.25rem,2.5vw,2rem)]"
               />
             </a>
           ))
@@ -119,7 +153,7 @@ const currentYear = new Date().getFullYear();
     >
     </div>
     <h4
-      class="text-center text-[#004B64] text-[clamp(1rem,1.5vw,1.0625rem)] my-[clamp(1rem,2vw,1rem)]"
+      class="text-center text-[#004B64] text-[clamp(0.875rem,1.5vw,1.0625rem)] my-[clamp(1rem,2vw,1rem)]"
     >
       &copy; Copyright {currentYear}. Ingenio ADN. All right reserved
     </h4>
