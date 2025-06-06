@@ -7,16 +7,16 @@ const cardsData = [
       'Expertos en aceros de perforación y repuestos para aire reverso, convencional y diamantina.',
   },
   {
+    img: '/card-3.svg',
+    title: 'Fuerza en unidad',
+    paragraph:
+    'Creemos en el trabajo colaborativo para ofrecer respuestas sólidas y confiables a tu empresa.',
+  },
+  {
     img: '/card-2.svg',
     title: 'Impulsados por un propósito',
     paragraph:
       'Nuestra mision es clara, trabajar juntos para desarrollar soluciones efectivas que se traduzcan en mejores repuestos',
-  },
-  {
-    img: '/card-3.svg',
-    title: 'Fuerza en unidad',
-    paragraph:
-      'Creemos en el trabajo colaborativo para ofrecer respuestas sólidas y confiables a tu empresa.',
   },
   {
     img: '/card-4.svg',
@@ -57,7 +57,7 @@ const cardsData = [
         </p>
 
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 gap-[clamp(1rem,1vw,0.5rem)] mb-8"
+          class="grid grid-cols-2 sm:grid-cols-2 gap-[clamp(1rem,1vw,0.5rem)] mb-8"
         >
           {
             cardsData.map((card) => (
@@ -82,7 +82,7 @@ const cardsData = [
       </div>
 
       <div
-        class="w-full hidden md:flex justify-end col-span-1 lg:col-start-3 lg:row-start-1 mt-[clamp(0.5rem,1vw,0.5rem)]"
+        class="w-full hidden lg:flex justify-end col-span-1 lg:col-start-3 lg:row-start-1 mt-[clamp(0.5rem,1vw,0.5rem)]"
       >
         <img
           src="/img-card.svg"
@@ -92,7 +92,7 @@ const cardsData = [
       </div>
 
       <div
-        class="col-span-1 lg:col-span-3 items-center bg-[#D0DBE0] p-[clamp(1.5rem,2.5vw,2.5rem)] rounded-xl mb-[clamp(2rem,9vw,4.5rem)] space-y-[clamp(1rem,2vw,1rem)] mt-[clamp(3rem,20vw,10rem)]"
+        class="col-span-1 lg:col-span-3 items-center bg-[#D0DBE0] p-[clamp(1.5rem,2.5vw,2.5rem)] rounded-xl mb-0 lg:mb-[clamp(2rem,9vw,4.5rem)] space-y-[clamp(1rem,2vw,1rem)] mt-0 lg:mt-[clamp(3rem,20vw,10rem)]"
       >
         <h2
           class="text-[#000929] text-center md:text-left text-[clamp(1.25rem,3.4vw,2.125rem)] font-bold"
@@ -105,7 +105,7 @@ const cardsData = [
           Cuéntanos tus necesidades y te brindaremos la mejor opción.
         </p>
         <div
-          class="flex flex-col md:flex-row gap-[clamp(0.5rem,1vw,0.5rem)] justify-center items-center"
+          class="flex flex-col lg:flex-row gap-[clamp(0.5rem,1vw,0.5rem)] justify-center items-center"
         >
           <button
             class="hidden md:block bg-[#FFBD2B] hover:bg-[#FFBD2B]/80 text-black px-[clamp(3rem,12.5vw,6.25rem)] py-[clamp(0.75rem,1.5vw,0.75rem)] font-bold rounded-md w-full md:w-auto text-center text-[clamp(0.75rem,1.5vw,1rem)]"

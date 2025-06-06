@@ -1,16 +1,66 @@
 ---
 const data = {
-  socials: [{ icon: '/wpp-icon.svg', url: '#' }],
+  socials: [
+    { icon: "/phone-icon.svg", url: "#" },
+    { icon: "/instagram-icon.svg", url: "#" },
+    { icon: "/linkedin-icon.svg", url: "#" },
+    { icon: "/wpp-icon.svg", url: "#" },
+  ],
 };
 ---
 
-<div
-  class="sticky top-0 z-[999] bg-[#EDA732] text-white text-[clamp(0.875rem,1.5vw,0.875rem)] flex justify-end items-center gap-[clamp(1rem,2vw,1rem)] p-[clamp(1.5rem,3vw,1.5rem)] overflow-visible h-[clamp(3.875rem,7.75vw,3.875rem)]"
->
+<div class="sticky top-0 z-[1000] bg-white w-full">
   <div
-    class="absolute flex items-center gap-[clamp(1rem,2vw,1rem)] bg-[#004b71] min-w-md right-0 justify-center h-[clamp(4.8125rem,9.625vw,4.8125rem)] sm:flex hidden"
-    style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 10% 100%);"
+    class="absolute flex items-center gap-[clamp(1rem,2vw,1rem)] bg-[#004b71] w-2/3 lg:w-1/3 right-0 justify-center h- h-[clamp(3.75005rem,9.625vw,4.8125rem)] sm:flex z-[1000]"
+    style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);"
   >
-    {}
+    <a
+      href={data.socials[0].url}
+      class="w-full flex justify-center pl-10 sm:hidden items-center gap-x-1"
+    >
+      <img
+        src={data.socials[0].icon}
+        alt="WhatsApp Icon"
+        class="h-[clamp(1.5rem,3vw,1.5rem)]"
+      />
+      <span class="text-white">(+54) 261 496 0201</span>
+    </a>
+    <div class="hidden sm:flex w-full pr-20 justify-end items-center gap-x-10">
+      <a
+        href={data.socials[3].url}
+        class="hidden items-center gap-[clamp(0.5rem,1vw,0.5rem)] sm:flex"
+      >
+        <img
+          src={data.socials[3].icon}
+          alt="Email Icon"
+          class="h-[clamp(1.5rem,3vw,1.5rem)]"
+        />
+      </a>
+      <a
+        href={data.socials[1].url}
+        class="hidden items-center gap-[clamp(0.5rem,1vw,0.5rem)] sm:flex"
+      >
+        <img
+          src={data.socials[1].icon}
+          alt="Email Icon"
+          class="h-[clamp(1.5rem,3vw,1.5rem)]"
+        />
+      </a>
+
+      <a
+        href={data.socials[2].url}
+        class="hidden items-center gap-[clamp(0.5rem,1vw,0.5rem)] sm:flex"
+      >
+        <img
+          src={data.socials[2].icon}
+          alt="Phone Icon"
+          class="h-[clamp(1.5rem,3vw,1.5rem)]"
+        />
+      </a>
+    </div>
   </div>
+</div>
+<div
+  class="sticky top-0 z-[999] bg-[#EDA732] text-white text-[clamp(0.875rem,1.5vw,0.875rem)] flex justify-end items-center gap-[clamp(1rem,2vw,1rem)] p-5 md:p-8 overflow-visible"
+>
 </div>

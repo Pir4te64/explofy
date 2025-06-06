@@ -38,10 +38,10 @@ const productData = [
       </div>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-[clamp(1.5rem,10vw,5rem)]">
+    <div class="flex w-full overflow-scroll lg:flex-none lg:overflow-hidden lg:grid lg:grid-cols-3 gap-5 pb-5">
       {
         productData.map((products) => (
-          <div class="bg-white hover:bg-[#e8f0f3] w-full mx-auto max-w-[20rem] md:max-w-none md:mx-[clamp(0.75rem,1.5vw,0.75rem)] rounded-lg overflow-hidden shadow-md">
+          <div class="bg-white hover:bg-[#e8f0f3] w-full mx-auto min-w-64 max-w-[20rem] md:max-w-none md:mx-[clamp(0.75rem,1.5vw,0.75rem)] rounded-lg shadow-md">
             <div class="h-[clamp(10rem,30vw,15rem)] overflow-hidden">
               <img
                 src={products.img}
@@ -53,7 +53,7 @@ const productData = [
               <h3 class="text-center md:text-left text-[clamp(1.25rem,3vw,2rem)] font-semibold mb-[clamp(0.75rem,1.5vw,0.75rem)]">
                 {products.title}
               </h3>
-              <p class="text-center md:text-left text-gray-700 mb-[clamp(1rem,2vw,1rem)] font-light text-[clamp(0.875rem,1.5vw,1.25rem)] leading-[clamp(1.4,1.8,2.25)]">
+              <p class="text-center md:text-left text-gray-700  font-light text-[clamp(0.875rem,1.5vw,1.25rem)] ">
                 {products.paragraph}
               </p>
             </div>

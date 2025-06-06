@@ -84,28 +84,29 @@ const hasCtaCard = productsData.ctaCard;
 
       <!-- Product Cards Grid -->
       <div
-        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-[clamp(1.5rem,3vw,3rem)] w-full"
+        class="grid grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-[clamp(1.5rem,3vw,3rem)] w-full"
       >
         {
           productCards.map((card) => (
-            <div class="p-[clamp(1rem,2vw,1rem)]">
+            
               <ProductCard
                 image={card.image}
                 title={card.title}
                 description={card.subtitle}
                 buttonText={card.button}
               />
-            </div>
+            
           ))
         }
-        {
+       
+      </div>
+       {
           isEvenNumberOfCards && hasCtaCard && (
-            <div class="p-[clamp(1rem,2vw,1rem)]">
+            <div class="p-[clamp(1rem,2vw,1rem)] lg:hidden">
               <QuoteRequestCard />
             </div>
           )
         }
-      </div>
     </div>
   </section>
   <Footer />

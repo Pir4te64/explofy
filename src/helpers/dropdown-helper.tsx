@@ -15,7 +15,7 @@ export function renderDropdownItems(
     window.location.href = `/productos/${categorySlug}`;
   };
   return (
-    <div className="flex flex-row w-full max-w-[clamp(31.25rem,62.5vw,43.75rem)] bg-[#CCD9DF] rounded-xl border border-[#B49AFF] shadow-lg p-[clamp(1rem,2vw,2rem)] gap-[clamp(0.5rem,1vw,0.5rem)]">
+    <div className="w-[1200px] flex flex-row max-w-[clamp(31.25rem,62.5vw,43.75rem)] bg-[#CCD9DF] rounded-xl border border-[#B49AFF] shadow-lg p-[clamp(1rem,2vw,2rem)] gap-[clamp(0.5rem,1vw,0.5rem)]">
       {/* Main categories */}
       <div className="flex flex-col gap-[clamp(1rem,2vw,1.75rem)] min-w-[clamp(10rem,20vw,14rem)]">
         {items.map((item, idx) => (
