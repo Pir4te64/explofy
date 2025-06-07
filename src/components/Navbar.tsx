@@ -34,8 +34,8 @@ export function Navbar() {
   };
 
   return (
-    <nav className="sticky top-0 w-[70rem] 2xl:w-[95rem] container bg-[#004B64] h-[clamp(3.5rem,4.5rem,5.4rem)] flex flex-row justify-between">
-      <div className="flex items-center justify-between max-w-[1200px] w-full h-full px-[clamp(1rem,2vw,3rem)]">
+    <nav className="sticky top-0 w-full max-w-[1550px] bg-[#004B64] h-[clamp(3.5rem,4.5rem,5.4rem)] flex flex-row justify-between">
+      <div className="flex items-center justify-between w-full h-full px-[clamp(1rem,2vw,3rem)]">
         {/* Mobile menu button */}
         <button className="md:hidden text-white p-2" onClick={toggleMobileMenu}>
           <Menu className="size-6" />
@@ -59,7 +59,7 @@ export function Navbar() {
                   <ChevronDown className="size-[clamp(0.75rem,1vw,1rem)]" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[clamp(1rem,5vw,13rem)] mt-[1rem]">
+              <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[clamp(1rem,5vw,13rem)] mt-[1rem] w-full">
                 {renderDropdownItems(
                   navLink.dropdownItems,
                   selectedIndex,
@@ -68,7 +68,7 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <a href="#" className="hover:underline hover:text-[#f5a623]">
+          <a href="/nosotros" className="hover:underline hover:text-[#f5a623]">
             Nosotros
           </a>
           <a href="/contacto" className="hover:underline hover:text-[#f5a623]">

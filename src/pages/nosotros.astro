@@ -1,0 +1,148 @@
+---
+import Footer from "@/components/Footer.astro";
+import Header from "@/components/Header.astro";
+import OverHeader from "@/components/OverHeader.astro";
+import Layout from "@/layouts/Layout.astro";
+
+const cardsInfo = [
+  {
+    icon: "/us/card-icon.svg",
+    title: "Impulsados por un propósito",
+    paragraph:
+      "Nuestra misión es clara: trabajar contigo para desarrollar soluciones efectivas que se traduzcan en grandes resultados. Juntos, podemos hacerlo.",
+  },
+  {
+    icon: "/us/card-icon.svg",
+    title: "Fuerza en unidad",
+    paragraph:
+      "Creemos en el poder del trabajo colaborativo. En Explofy, construimos respuestas sólidas y confiables para las necesidades específicas de tu empresa.",
+  },
+  {
+    icon: "/us/card-icon.svg",
+    title: "El acero nos une",
+    paragraph:
+      "Somos especialistas en aceros de perforación, repuestos para aire reverso, convencional y diamantina. En Explofy, combinamos experiencia y precisión para acompañarte en cada desafío.",
+  },
+  {
+    icon: "/us/card-icon.svg",
+    title: "Soluciones en metal",
+    paragraph:
+      "Creamos estructuras y componentes metalúrgicos diseñados a medida para cada desafío de exploración. Combinamos precisión, innovación y excelencia en ingeniería para superar los más altos estándares de calidad.",
+  },
+];
+
+const peopleCards = [
+  {
+    name: "Mario Catalani",
+    position: "Gerente de ventas",
+    image: "/us/team-mario-2.jpg",
+  },
+  {
+    name: "Romina Catalani",
+    position: "Gerente de administración y finanzas",
+    image: "/us/team-romina-2.jpg",
+  },
+  {
+    name: "Mariano Catalani",
+    position: "Gerente de producción y calidad",
+    image: "/us/team-mariano-2.jpg",
+  },
+];
+---
+
+<Layout>
+  <OverHeader />
+  <Header />
+  <main class="bg-gradient-to-b from-[#DCE4EC] via-white to-white">
+    <section
+      style="padding-left: 0 !important; padding-right: 0 !important;"
+      class="max-w-[1550px] mx-auto w-full "
+    >
+      <div class="grid grid-cols-1 xl:grid-cols-2 pt-10 pb-16 xl:py-28 gap-12 px-0 xl:px-4 2xl:px-0">
+        <img src="/us/nosotros-logo-2.jpg" alt="Nosotros Logo" class="h-full w-full object-cover" />
+
+        <div class="text-center xl:text-left px-4 xl:px-0">
+          <h2 class="font-semibold text-xl xl:text-5xl mb-8">Bienvenidos a Explofy</h2>
+          <p class="font-light text-xs md:text-sm xl:text-[20px] mb-5 xl:leading-9">
+            Tenemos más de 25 años de trayectoria. Somos el resultado de un legado<br />
+            que combina<span class="font-semibold"> experiencia, compromiso y visión de futuro</span> en las industrias<br />
+            del petróleo y la minería. Explofy es la evolución natural de Catalani<br />
+            Industria Metalúrgica.
+          </p>
+
+          <p class="font-light text-xs md:text-sm xl:text-[20px] mb-5 xl:leading-9">
+            Este cambio no es solo una nueva denominación de marca, es una<br />
+            respuesta a la demanda de un mercado global que nos exige <span class="font-semibold">soluciones<br />
+            más dinámicas, innovadoras y sostenibles</span>, sin renunciar a los valores que <br />
+            nos definen: seriedad, compromiso y profesionalismo.
+          </p>
+
+          <p class="font-light text-xs md:text-sm xl:text-[20px] xl:leading-9">
+            Desde aquellos primeros pasos hasta el presente, Catalani Industria<br />
+            Metalúrgica, ha sido una referencia en el sector. Hoy, bajo el liderazgo<br />
+            de Mario Catalani y la fuerza de la segunda generación, nuestro proyecto<br />
+            familiar se consolida como una <span class="font-semibold">fábrica de ingeniería de precisión</span> y de<br />
+            última generación.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#004B64] lg:py-20">
+      <div style="padding-left: 0 !important; padding-right: 0 !important;" class="container-fluid py-20 space-y-10">
+        <h2 class="text-center text-xl md:text-2xl lg:text-[50px] font-semibold text-white">
+          Somos la fábrica
+        </h2>
+        <h3 class="text-center text-xs md:text-lg xl:text-[20px] text-white lg:pb-14">
+          En Explofy la tradición, la experiencia y la innovación se encuentran,
+          para lograr juntos un crecimiento sostenible.
+        </h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          {
+            cardsInfo.map((card) => (
+              <div class="flex flex-row items-start gap-2">
+                <img src={card.icon} alt="Card Icon" />
+                <div class="flex flex-col space-y-4">
+                  <h3 class="font-semibold text-sm md:text-xl text-white">{card.title}</h3>
+                  <p class="text-white text-sm md:text-lg font-light">{card.paragraph}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <section class="lg:py-32 bg-white">
+      <div style="padding-left: 0 !important; padding-right: 0 !important;" class="w-full container-fluid mx-auto px-4 py-16 bg-white">
+        <h1 class="text-center text-3xl md:text-4xl font-bold mb-16 text-[#0f172a]">
+          Somos tu mejor aliado
+        </h1>
+
+        <div class="grid grid-cols-2 place-content-center md:grid-cols-3 gap-5 lg:gap-28 w-full mx-auto">
+          {
+            peopleCards.map((person, index) => (
+              <div
+                class={index === 2
+                  ? "col-span-full md:col-span-1 flex flex-col overflow-hidden place-self-center md:place-self-start max-w-[186px] md:max-w-full md:w-full"
+                  : "flex flex-col overflow-hidden"}
+              >
+                <img
+                  src={person.image}
+                  alt={person.name}
+                  class="object-cover relative w-full max-h-96 rounded-lg"
+                />
+                <div class="bg-[#EDA732] flex flex-col px-2 md:px-4 justify-center items-center text-white text-center rounded-xl w-full max-w-3/4 mx-auto h-16 xl:h-36 -mt-11 z-10">
+                  <h3 class="text-xs xl:text-3xl font-semibold mb-1">{person.name}</h3>
+                  <p class="text-xs xl:text-xl font-light">{person.position}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>

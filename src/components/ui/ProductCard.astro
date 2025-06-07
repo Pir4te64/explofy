@@ -15,23 +15,23 @@ const {
 ---
 
 <div
-  class="rounded-2xl overflow-hidden mb-[clamp(2rem,4vw,2rem)] h-full bg-[#F7F8FA] shadow flex flex-col"
+  class="h-fit mb-[clamp(2rem,4vw,2rem)] flex flex-col rounded-2xl"
 >
   <div
-    class="flex items-center justify-center min-h-[clamp(16.25rem,32.5vw,16.25rem)] bg-white"
+    class="flex items-center justify-center rounded-2xl bg-gray-200/50 w-full h-36 lg:h-72"
   >
-    <img src={image} alt={title} class="w-full h-full object-contain" />
+    <img src={image} alt={title} class="object-contain w-full h-full rounded-2xl" />
   </div>
   <div
-    class="px-[clamp(2rem,4vw,2rem)] pt-[clamp(1.5rem,3vw,1.5rem)] pb-[clamp(2rem,4vw,2rem)] flex flex-col h-full bg-white rounded-b-2xl"
+    class=" pt-[clamp(1.5rem,3vw,1.5rem)] flex flex-col h-full bg-white rounded-b-2xl"
   >
     <h3
-      class="font-bold text-[clamp(1.25rem,2.5vw,1.25rem)] mb-[clamp(0.75rem,1.5vw,0.75rem)] text-left text-[#23263B]"
+      class="text-xs lg:text-2xl not-last-of-type:font-bold text-[clamp(1.25rem,2.5vw,1.25rem)] mb-[clamp(0.75rem,1.5vw,0.75rem)] text-left text-[#23263B]"
     >
       {title}
     </h3>
     <p
-      class="text-[clamp(1rem,2vw,1rem)] text-[#23263B] mb-[clamp(1rem,2vw,1rem)] text-left leading-relaxed"
+      class="text-xs lg:text-2xl text-[#23263B] mb-[clamp(1rem,2vw,1rem)] text-left leading-relaxed"
     >
       {description}
     </p>
@@ -42,7 +42,7 @@ const {
         .normalize('NFD')
         .replace(/[\u0300-\u036f]/g, '')
         .replace(/\s+/g, '-')}`}
-      class="text-[clamp(0.875rem,1.75vw,0.875rem)] text-[#F5A623] font-light text-left mt-0 hover:text-[#e59820]"
+      class="text-xs lg:text-2xl text-[#F5A623] font-light text-left mt-0 hover:text-[#e59820]"
       style="text-underline-offset: 3px;"
     >
       {buttonText} &rarr;
