@@ -47,12 +47,11 @@ export function Navbar() {
             ref={dropdownRef}
             className="relative"
             onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
           >
             <DropdownMenu open={isOpen} onOpenChange={setIsOpen}>
               <DropdownMenuTrigger asChild>
                 <button
-                  className="flex items-center gap-1 hover:underline hover:text-[#f5a623]"
+                  className="flex items-center gap-1 hover:text-[#f5a623]"
                   onClick={handleProductosClick}
                 >
                   {navLink.title}
@@ -68,10 +67,10 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-          <a href="/nosotros" className="hover:underline hover:text-[#f5a623]">
+          <a href="/nosotros" className="hover:text-[#f5a623]">
             Nosotros
           </a>
-          <a href="/contacto" className="hover:underline hover:text-[#f5a623]">
+          <a href="/contacto" className="hover:text-[#f5a623]">
             Contacto
           </a>
         </div>

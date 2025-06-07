@@ -27,6 +27,7 @@
 /* Apply scaling to html for rem-based sizing */
 html {
   font-size: calc(var(--base-font-size) * var(--font-scale) * 1px);
+  overflow-y: scroll;
 }
 
 /* Responsive containers */
