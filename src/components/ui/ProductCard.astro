@@ -31,18 +31,17 @@ const {
       {title}
     </h3>
     <p
-      class="text-[clamp(1.1rem,2.2vw,1.25rem)] text-[#23263B] mb-[clamp(1rem,2vw,1rem)] text-left leading-relaxed"
+      class="text-[clamp(0.9rem,1.5vw,1rem)] text-[#23263B] mb-[clamp(1rem,2vw,1rem)] text-left leading-relaxed"
     >
       {description}
     </p>
     <a
       href={`/productos/${title
         .toLowerCase()
-        .toLowerCase()
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/[\u0000-\u001f]/g, '')
         .replace(/\s+/g, '-')}`}
-      class="text-xs lg:text-2xl text-[#F5A623] font-light text-left mt-0 hover:text-[#e59820]"
+      class="text-[clamp(0.9rem,1.5vw,1rem)] text-[#F5A623] font-light text-left mt-0 hover:text-[#e59820]"
       style="text-underline-offset: 3px;"
     >
       {buttonText} &rarr;
