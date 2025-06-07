@@ -59,7 +59,7 @@ export function Navbar() {
                   <ChevronDown className="size-[clamp(0.75rem,1vw,1rem)]" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-transparent border-none shadow-none p-0 ml-[clamp(1rem,5vw,13rem)] mt-[1rem] w-full">
+              <DropdownMenuContent align="start" sideOffset={8} className="bg-transparent border-none shadow-none p-0 mt-[1rem] min-w-[350px]">
                 {renderDropdownItems(
                   navLink.dropdownItems,
                   selectedIndex,
