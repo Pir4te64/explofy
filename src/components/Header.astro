@@ -6,32 +6,27 @@ import { Navbar } from './Navbar';
   class="bg-white flex flex-col justify-between px-[clamp(0.5rem,1vw,1rem)] py-[clamp(0.75rem,2vw,2rem)] z-[999] sticky top-[clamp(2.475rem,4vw,4rem)]"
 >
   <div
-    class="flex items-center gap-[clamp(0.5rem,1vw,1rem)] justify-between container-fluid"
+    class="flex items-center justify-between px-[clamp(1rem,2vw,3rem)] w-full"
   >
-    <a href="/" class="flex-shrink-0">
-      <img
-        src="/explofy-logo.svg"
-        alt="Explofy Catalani Factory"
-        class="h-[clamp(2.5rem,5vw,5rem)] ml-0 md:ml-[clamp(0.5rem,4vw,5rem)] mb-[clamp(0.25rem,2vw,2.5rem)]"
-      />
-    </a>
-
-    <div
-      class="hidden sm:flex flex-row items-center gap-[clamp(0.25rem,1vw,1rem)] mb-[clamp(0.25rem,1vw,1.25rem)] mr-0 md:mr-[clamp(0.5rem,8vw,10rem)]"
-    >
-      <img
-        src="/phone-icon.svg"
-        alt="Phone Icon"
-        class="h-[clamp(1rem,2.5vw,2.5rem)] hidden sm:block"
-      />
-      <p
-        class="text-[#004B64] flex flex-col font-bold text-[clamp(0.6rem,1.5vw,1rem)]"
-      >
-        <span class="hidden sm:block">¡Hola!</span>
-        <span class="text-black font-normal text-[clamp(0.6rem,1.2vw,0.9rem)]"
-          >(+54) 0261 4960201</span
-        >
-      </p>
+    <div class="max-w-[1550px] mx-auto px-[clamp(1rem,2vw,3rem)] w-full flex items-end justify-between">
+      <a href="/" class="flex-shrink-0">
+        <img
+          src="/explofy-logo.svg"
+          alt="Explofy Catalani Factory"
+          class="h-[clamp(2.5rem,5vw,5rem)] ml-0 mb-[clamp(0.25rem,2vw,2.5rem)]"
+        />
+      </a>
+      <div class="hidden sm:flex flex-row items-center gap-2 mb-[clamp(0.25rem,2vw,2.5rem)]">
+        <img
+          src="/phone-icon.svg"
+          alt="Phone Icon"
+          class="h-[clamp(1rem,2.5vw,2.5rem)]"
+        />
+        <div class="flex flex-col justify-center">
+          <span class="text-[#004B64] font-bold text-[clamp(0.6rem,1.5vw,1rem)]">¡Hola!</span>
+          <span class="text-black font-normal text-[clamp(0.6rem,1.2vw,0.9rem)]">(+54) 0261 4960201</span>
+        </div>
+      </div>
     </div>
   </div>
   <div
