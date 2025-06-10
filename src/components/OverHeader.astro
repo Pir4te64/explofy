@@ -2,8 +2,6 @@
 const data = {
   socials: [
     { icon: "/phone-icon.svg", url: "#" },
-    { icon: "/instagram-icon.svg", url: "#" },
-    { icon: "/linkedin-icon.svg", url: "#" },
     { icon: "/wpp-icon.svg", url: "#" },
   ],
 };
@@ -11,7 +9,7 @@ const data = {
 
 <div class="sticky top-0 z-[1000] bg-white w-full">
   <div
-    class="absolute flex items-center gap-[clamp(1rem,2vw,1rem)] bg-[#004b71] w-2/3 lg:w-1/3 right-0 justify-center h- h-[clamp(3.75005rem,9.625vw,4.8125rem)] sm:flex z-[1000]"
+    class="absolute flex items-center gap-[clamp(1rem,2vw,1rem)] bg-[#004b71] w-2/3 lg:w-1/3 right-0 justify-center h-[clamp(3.75005rem,9.625vw,4.8125rem)] sm:flex z-[1000] pr-[3rem]"
     style="clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);"
   >
     <a
@@ -20,40 +18,19 @@ const data = {
     >
       <img
         src={data.socials[0].icon}
-        alt="WhatsApp Icon"
+        alt="Phone Icon"
         class="h-[clamp(1.5rem,3vw,1.5rem)]"
       />
       <span class="text-white">(+54) 261 496 0201</span>
     </a>
-    <div class="hidden sm:flex w-full pr-20 justify-end items-center gap-x-10">
-      <a
-        href={data.socials[3].url}
-        class="hidden items-center gap-[clamp(0.5rem,1vw,0.5rem)] sm:flex"
-      >
-        <img
-          src={data.socials[3].icon}
-          alt="Email Icon"
-          class="h-[clamp(1.5rem,3vw,1.5rem)]"
-        />
-      </a>
+    <div class="hidden sm:flex w-full pr-20 justify-end items-center">
       <a
         href={data.socials[1].url}
-        class="hidden items-center gap-[clamp(0.5rem,1vw,0.5rem)] sm:flex"
+        class="flex items-center"
       >
         <img
           src={data.socials[1].icon}
-          alt="Email Icon"
-          class="h-[clamp(1.5rem,3vw,1.5rem)]"
-        />
-      </a>
-
-      <a
-        href={data.socials[2].url}
-        class="hidden items-center gap-[clamp(0.5rem,1vw,0.5rem)] sm:flex"
-      >
-        <img
-          src={data.socials[2].icon}
-          alt="Phone Icon"
+          alt="WhatsApp Icon"
           class="h-[clamp(1.5rem,3vw,1.5rem)]"
         />
       </a>
