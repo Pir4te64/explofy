@@ -99,14 +99,14 @@ const hasCtaCard = productsData.ctaCard;
           ))
         }
        
-      </div>
        {
           isEvenNumberOfCards && hasCtaCard && (
-            <div class="p-[clamp(1rem,2vw,1rem)] lg:hidden">
+            <div class="col-span-full md:col-span-1 flex justify-center">
               <QuoteRequestCard />
             </div>
           )
         }
+      </div>
     </div>
   </section>
   <Footer />
