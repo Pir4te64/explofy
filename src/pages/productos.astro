@@ -8,6 +8,7 @@ import componentsData from '../assets/ui/components.json';
 import OverHeader from '@/components/OverHeader.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
+import FeatureCarousel from '../components/ui/FeatureCarousel.tsx';
 
 const productsData = componentsData.products;
 
@@ -63,12 +64,17 @@ const hasCtaCard = productsData.ctaCard;
 
       <!-- Feature Cards -->
       <div class="w-full">
+        <!-- Carrusel solo en mobile -->
+        <div class="block md:hidden mb-[clamp(4rem,8vw,4rem)]">
+          <FeatureCarousel client:only="react" features={featureCards} />
+        </div>
+        <!-- Grid en desktop -->
         <div
-          class="flex flex-col md:flex-row justify-between gap-[clamp(1.5rem,3vw,3rem)] w-full mb-[clamp(4rem,8vw,4rem)]"
+          class="hidden md:grid grid-cols-2 xl:grid-cols-4 gap-[clamp(1.5rem,3vw,3rem)] w-full mb-[clamp(4rem,8vw,4rem)]"
         >
           {
             featureCards.map((card) => (
-              <div class="flex-1 p-[clamp(1.5rem,3vw,1.5rem)] flex justify-center">
+              <div class="p-[clamp(1.5rem,3vw,1.5rem)] flex justify-center">
                 <FeatureCard icon={card.icon} title={card.title} />
               </div>
             ))
